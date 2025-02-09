@@ -1,0 +1,202 @@
+body {
+    font-family: "Poppins", sans-serif;
+
+}
+
+.main-section {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // min-height: 50vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    text-align: center;
+    max-width: 800px;
+}
+
+.text-content {
+    margin-bottom: 1.2rem;
+}
+
+.name {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #007bff, #00bcd4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 1.75rem;
+    color: #000103;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #718096;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::before {
+        transform: translateY(0);
+    }
+
+    &.default {
+        background: linear-gradient(135deg, #007bff, #00bcd4);
+        color: white;
+        border: none;
+
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background: linear-gradient(135deg, #0056b3, #008ba3);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &.outline {
+        color: #3C43B6;
+        border: 2px solid #3C43B6;
+
+        &:hover {
+            background-color: rgba(0, 123, 255, 0.05);
+            color: #ba2dba;
+            border-color: #ba2dba;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.15);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            border-radius: 50%;
+        }
+
+        svg {
+            width: 26px;
+            height: 26px;
+            fill: #3C43B6;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+            &::before {
+                transform: scale(1);
+            }
+
+            svg {
+                fill: #007bff;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        margin-top: 2rem;
+        gap: 1.5rem;
+
+        a {
+            width: 48px;
+            height: 48px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

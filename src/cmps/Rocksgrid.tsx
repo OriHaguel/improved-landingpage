@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import flyingrock from '../assets/img/rough-beige-rock-formation-detailed-closeup.png';
+import { MainSection } from './Namemainsection';
 
 export function RockGrid() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -18,13 +19,14 @@ export function RockGrid() {
 
     return (
         <section
-            className='flyingrock-grid relative'
+            className='flyingrock-grid'
             onMouseMove={handleMouseMove}
             style={{
                 transform: `translate(${position.x}px, ${position.y}px)`,
                 transition: 'transform 0.10s ease-out',
             }}
         >
+
             {[...Array(5)].map((_, i) => (
                 <div
                     key={i}

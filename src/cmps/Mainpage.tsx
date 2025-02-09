@@ -3,6 +3,7 @@ import { Parallax } from 'react-parallax';
 import sky from '../assets/img/freepik__dd-more-rocks__84491.png';
 import { RockGrid } from './Rocksgrid';
 import CloudTrail from './MouseTracker';
+import { MainSection } from './Namemainsection';
 
 const Mainpage = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -15,6 +16,9 @@ const Mainpage = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const isMobile = () => {
+        return window.matchMedia("(max-width: 768px)").matches;
+    };
     const overlayOpacity = Math.min(scrollY / 3300, 0.6);
 
     return (
@@ -24,8 +28,12 @@ const Mainpage = () => {
                 bgImage={sky}
                 strength={200}
                 style={{ height: "100vh", position: 'relative' }}
+                bgImageStyle={{
+                    height: "100%",
+                    ...(isMobile() && { objectFit: 'cover' })
+                }}
             >
-                <div ref={parallaxRef} style={{ position: 'relative', height: '100vh' }}>
+                <div ref={parallaxRef} style={{ position: 'relative', height: '90vh' }}>
                     <CloudTrail containerRef={parallaxRef} />
                     <div
                         style={{
@@ -39,6 +47,7 @@ const Mainpage = () => {
                             pointerEvents: 'none',
                         }}
                     />
+                    <MainSection />
                     <RockGrid />
                 </div>
             </Parallax>
