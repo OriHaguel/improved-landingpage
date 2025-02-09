@@ -1,6 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export function MainSection() {
+    const { scrollY } = useScroll();
+    const scale = useTransform(scrollY, [0, 300], [1, 1.3]); // Adjust range for scaling
+
     return (
         <motion.section
             className="main-section"
@@ -15,7 +18,9 @@ export function MainSection() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
                 >
-                    <h1 className="name">Ori Haguel</h1>
+                    <motion.h1 className="name" style={{ scale }}>
+                        Ori Haguel
+                    </motion.h1>
                     <h2 className="title">Full Stack Developer</h2>
                 </motion.div>
                 <div className="social-icons">
