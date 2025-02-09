@@ -1,0 +1,28 @@
+/* tailwind.scss */
+
+
+@use "setup/variables";
+@use "setup/functions";
+@use "setup/mixins";
+
+
+@use "basics/helpers";
+@use "basics/layout";
+@use "basics/base";
+
+@use "cmps/AppHeader.scss";
+
+@use "pages/home.scss";
+@use "RootCmp";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --radius: 0.5rem
+  }
+}
