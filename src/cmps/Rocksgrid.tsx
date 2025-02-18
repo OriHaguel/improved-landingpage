@@ -27,7 +27,7 @@ export function RockGrid() {
             }}
         >
 
-            {[...Array(5)].map((_, i) => (
+            {[...Array(6)].map((_, i) => (
                 <div
                     key={i}
                     className={`max-w-[8rem] flyingrock-container-${i}`}

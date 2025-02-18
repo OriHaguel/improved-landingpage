@@ -10,8 +10,11 @@
 @use "basics/layout";
 @use "basics/base";
 
+@use "cmps/Scrollvelocity.scss";
+@use "cmps/Bubbletext.scss";
 @use "cmps/AppHeader.scss";
 @use "cmps/MainSection.scss";
+@use "cmps/AboutCards.scss";
 
 @use "pages/home.scss";
 @use "RootCmp";
@@ -24,6 +27,19 @@
 
 @layer base {
   :root {
-    --radius: 0.5rem
+    --radius: 0.5rem;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%
+  }
+
+  .dark {
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%
   }
 }

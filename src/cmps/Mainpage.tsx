@@ -4,6 +4,7 @@ import sky from '../assets/img/freepik__dd-more-rocks__84491.png';
 import { RockGrid } from './Rocksgrid';
 import CloudTrail from './MouseTracker';
 import { MainSection } from './Namemainsection';
+import { isMobile } from '@/services/utility';
 
 const Mainpage = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -26,15 +27,16 @@ const Mainpage = () => {
 
             <Parallax
                 bgImage={sky}
-                strength={200}
+                strength={400}
                 style={{ height: "100vh", position: 'relative' }}
                 bgImageStyle={{
                     height: "100%",
+                    width: '100%',
                     ...(isMobile() && { objectFit: 'cover' })
                 }}
             >
-                <div ref={parallaxRef} style={{ position: 'relative', height: '90vh' }}>
-                    <CloudTrail containerRef={parallaxRef} />
+                <div ref={parallaxRef} style={{ position: 'relative', height: '80vh' }}>
+                    {!isMobile() && <CloudTrail containerRef={parallaxRef} />}
                     <div
                         style={{
                             position: 'absolute',
@@ -42,7 +44,7 @@ const Mainpage = () => {
                             left: 0,
                             width: '100%',
                             height: '100vh',
-                            backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})`,
+                            // backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})`,
                             transition: 'background-color 0.1s ease',
                             pointerEvents: 'none',
                         }}
@@ -51,11 +53,6 @@ const Mainpage = () => {
                     <RockGrid />
                 </div>
             </Parallax>
-
-            <div style={{ padding: '20px', height: "100vh", backgroundColor: 'black' }}>
-                <h2>Home Page Content</h2>
-                <p>This is the home page. Scroll up and down to see the parallax effect in action.</p>
-            </div>
         </div>
     );
 };

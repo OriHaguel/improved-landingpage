@@ -1,3 +1,4 @@
+import { HyperText } from "@/components/magicui/hyper-text";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export function MainSection() {
@@ -18,10 +19,16 @@ export function MainSection() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
                 >
-                    <motion.h1 className="name" style={{ scale }}>
-                        Ori Haguel
+                    <motion.h1 style={{ scale }}>
+                        <HyperText className="name text-6xl">
+                            Ori Haguel
+                        </HyperText>
                     </motion.h1>
-                    <h2 className="title">Full Stack Developer</h2>
+                    <HyperText className="title">
+                        Full Stack Developer
+                    </HyperText>
+
+                    {/* <h2 className="title">Full Stack Developer</h2> */}
                 </motion.div>
                 <div className="social-icons">
                     <a href="https://github.com/OriHaguel" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">

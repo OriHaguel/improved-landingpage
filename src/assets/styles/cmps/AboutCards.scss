@@ -1,0 +1,160 @@
+@keyframes pan-overlay {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 0% -100%;
+    }
+}
+
+@keyframes pan-image {
+    0% {
+        background-position: 36% 42%;
+        background-size: 200%;
+    }
+
+    20% {
+        background-position: 30% 35%;
+        background-size: 200%;
+    }
+
+    20.0001% {
+        background-position: 60% 85%;
+        background-size: 500%;
+    }
+
+    40% {
+        background-position: 49% 81%;
+        background-size: 500%;
+    }
+
+    40.0001% {
+        background-position: 80% 42%;
+        background-size: 300%;
+    }
+
+    60% {
+        background-position: 84% 33%;
+        background-size: 300%;
+    }
+
+    60.0001% {
+        background-position: 0% 0%;
+        background-size: 300%;
+    }
+
+    80% {
+        background-position: 15% 4%;
+        background-size: 300%;
+    }
+
+    80.0001% {
+        background-position: 80% 10%;
+        background-size: 300%;
+    }
+
+}
+
+
+$primary-color: rgb(30, 141, 227);
+$secondary-color: rgb(118, 200, 147);
+$third-color: rgb(217, 237, 146);
+
+
+
+.screen-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(11, 11, 11);
+
+    .screen {
+        margin: auto;
+        aspect-ratio: 10/16;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        border-radius: 1rem;
+        // border: 3px solid rgb($primary-color, 0.8);
+        // background-color: rgb($primary-color, 0.15);
+        overflow: hidden;
+        position: relative;
+
+
+        .screen-img {
+            // background-image: url('../../assets/img/blueimountain.jpg');
+            height: 100%;
+            width: 100%;
+            background-size: 300%;
+            background-position: center;
+            filter: sepia(100%) hue-rotate(160deg);
+            opacity: 0.6;
+            position: absolute;
+            animation: pan-image 30s infinite linear;
+
+
+        }
+
+        .screen-overlay-0 {
+            background: linear-gradient(rgb($secondary-color, 0.15),
+                    rgb($secondary-color, 0.15) 3px,
+                    transparent 3px,
+                    transparent 9px);
+            height: 100%;
+            width: 100%;
+            background-size: 100% 9px;
+            animation: pan-overlay 25s infinite linear;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+        }
+
+        .screen-overlay-1 {
+            background: linear-gradient(rgb($primary-color, 0.15),
+                    rgb($primary-color, 0.15) 3px,
+                    transparent 3px,
+                    transparent 9px);
+            height: 100%;
+            width: 100%;
+            background-size: 100% 9px;
+            animation: pan-overlay 25s infinite linear;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+        }
+
+        .screen-overlay-2 {
+            background: linear-gradient(rgb($third-color, 0.15),
+                    rgb($third-color, 0.15) 3px,
+                    transparent 3px,
+                    transparent 9px);
+            height: 100%;
+            width: 100%;
+            background-size: 100% 9px;
+            animation: pan-overlay 25s infinite linear;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+        }
+
+        .screen-content {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 10;
+            display: grid;
+            place-items: center;
+
+            .border-container {
+                height: 95%;
+                width: 95%;
+                border-radius: 1rem;
+                // border: 1px solid rgba(81, 171, 255, 0.3);
+
+
+            }
+        }
+    }
+}
