@@ -40,16 +40,19 @@ export function AboutCards() {
                             style={{ border: `1px solid rgb(${design.color},0.3)` }}
 
                         >
-                            {i === 2 &&
-                                <IconCloudDemo />
-                            }
+                            <div className='icon-container'>
+                                {i === 2 &&
+                                    <IconCloudDemo />
+                                }
+                            </div>
+
                         </div>
                     </div>
                     <div className="screen-img" style={{
                         backgroundImage: `url(${design.mountainimg})`,
                         filter: `sepia(100%) hue-rotate(${design.huecolor}deg)`
                     }}></div>
-                    {/* <div className={`screen-overlay-${i}`}> </div> */}
+                    <div className={`screen-overlay-${i}`}> </div>
                 </div>
             ))}
             {/* <div className="screen w-[500px]">
