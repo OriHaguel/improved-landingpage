@@ -3,6 +3,8 @@ import yellowMountain from '../assets/img/yellowmountain.jpg'
 import greenMountain from '../assets/img/greenmountain.jpg'
 import { isMobile } from '@/services/utility'
 import IconCloudDemo from './Iconcloud'
+import StyledText from './TextEffect'
+import { title } from 'process'
 export function AboutCards() {
 
     const secondaryColor = '118, 200, 147'
@@ -12,17 +14,23 @@ export function AboutCards() {
         {
             color: primaryColor,
             mountainimg: blueMountain,
-            huecolor: 160
+            huecolor: 160,
+            text: 'Experience',
+            titleColor: '#1e8de3'
         },
         {
             color: secondaryColor,
             mountainimg: greenMountain,
-            huecolor: 100
+            huecolor: 100,
+            text: 'About Me',
+            titleColor: '#76c893'
         },
         {
             color: thirdColor,
             mountainimg: yellowMountain,
-            huecolor: 40
+            huecolor: 40,
+            text: 'Technologies',
+            titleColor: '#d9ed92'
         }
     ]
     return (
@@ -40,6 +48,15 @@ export function AboutCards() {
                             style={{ border: `1px solid rgb(${design.color},0.3)` }}
 
                         >
+                            <div>
+                                <StyledText color={`${design.titleColor}`} text={`${design.text}`} />
+                                {i === 1 && <p className="text-2xl font-bold tracking-wide text-white p-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eos libero, quae eum numquam illum saepe.
+                                    Neque dicta doloribus, cumque laborum saepe eligendi ipsa vitae dignissimos natus magnam. At, sint!
+                                </p>}
+                            </div>
+
+
+
                             <div className='icon-container'>
                                 {i === 2 &&
                                     <IconCloudDemo />

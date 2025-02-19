@@ -1,6 +1,7 @@
 import { AboutCards } from "@/cmps/AboutCards";
 import IconCloudDemo from "@/cmps/Iconcloud";
 import Mainpage from "@/cmps/Mainpage";
+import StyledText from "@/cmps/TextEffect";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 
 const HomePage = () => {
@@ -12,7 +13,6 @@ const HomePage = () => {
 
             <Mainpage />
             <AboutCards />
-
             {/* <div className="veloscroll-container">
                 <VelocityScroll className="veloscroll"> About Me </VelocityScroll>
 
