@@ -15,7 +15,7 @@ export function AboutCards() {
             color: primaryColor,
             mountainimg: blueMountain,
             huecolor: 160,
-            text: 'Experience',
+            text: 'Technologies',
             titleColor: '#1e8de3'
         },
         {
@@ -29,16 +29,16 @@ export function AboutCards() {
             color: thirdColor,
             mountainimg: yellowMountain,
             huecolor: 40,
-            text: 'Technologies',
+            text: 'Experience',
             titleColor: '#d9ed92'
         }
     ]
     return (
         <section className="screen-container">
-            {isMobile() === false && styles.map((design, i) => (
+            {styles.map((design, i) => (
 
 
-                <div key={i} className="screen w-[500px]" style={{
+                <div key={i} className="screen" style={{
                     border: `3px solid rgb(${design.color}, 0.8)`,
                     backgroundColor: `rgb(${design.color}, 0.15)`
                 }}>
@@ -50,15 +50,14 @@ export function AboutCards() {
                         >
                             <div>
                                 <StyledText color={`${design.titleColor}`} text={`${design.text}`} />
-                                {i === 1 && <p className="text-2xl font-bold tracking-wide text-white p-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eos libero, quae eum numquam illum saepe.
-                                    Neque dicta doloribus, cumque laborum saepe eligendi ipsa vitae dignissimos natus magnam. At, sint!
-                                </p>}
+                                {i === 1 && <p className="text-2xl tracking-wide  p-8 about-me-text">
+                                    I'm Ori Haguel, a Full-Stack Developer and Coding Academy graduate (640-hour bootcamp). I build reliable web apps with React, Redux, TypeScript, MongoDB and NestJS, always focusing on clean and maintainable code.                                </p>}
                             </div>
 
 
 
                             <div className='icon-container'>
-                                {i === 2 &&
+                                {i === 0 &&
                                     <IconCloudDemo />
                                 }
                             </div>
