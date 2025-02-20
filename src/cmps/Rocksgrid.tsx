@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import flyingrock from '../assets/img/test.webp';
+import flyingrock from '../assets/img/flyrock.webp';
 import { MainSection } from './Namemainsection';
 
 export function RockGrid() {

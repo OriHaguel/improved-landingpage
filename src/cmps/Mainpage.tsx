@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { Parallax } from 'react-parallax';
-import sky from '../assets/img/freepik__dd-more-rocks__84491.png';
+import sky from '../assets/img/freepik__dd-more-rocks__84491.webp';
 import { RockGrid } from './Rocksgrid';
 import CloudTrail from './MouseTracker';
 import { MainSection } from './Namemainsection';
