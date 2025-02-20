@@ -38,7 +38,7 @@ export function AboutCards() {
             {styles.map((design, i) => (
 
 
-                i === 0 && <div key={i} className="screen" style={{
+                <div key={i} className="screen" style={{
                     border: `3px solid rgb(${design.color}, 0.8)`,
                     backgroundColor: `rgb(${design.color}, 0.15)`
                 }}>
@@ -50,10 +50,10 @@ export function AboutCards() {
                         >
                             <div>
                                 <StyledText color={`${design.titleColor}`} text={`${design.text}`} />
-                                {/* {i === 1 && <p className="text-2xl tracking-wide  p-8 about-me-text">
-                                    I'm Ori Haguel, a Full-Stack Developer and Coding Academy graduate (640-hour bootcamp). 
+                                {i === 1 && <p className="text-2xl tracking-wide  p-8 about-me-text">
+                                    I'm Ori Haguel, a Full-Stack Developer and Coding Academy graduate (640-hour bootcamp).
                                     I build reliable web apps with React, Redux, TypeScript, MongoDB and NestJS,
-                                     always focusing on clean and maintainable code.</p>} */}
+                                    always focusing on clean and maintainable code.</p>}
                             </div>
 
 
