@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import flyingrock from '../assets/img/rough-beige-rock-formation-detailed-closeup.png';
+import flyingrock from '../assets/img/test.webp';
 import { MainSection } from './Namemainsection';
 
 export function RockGrid() {
