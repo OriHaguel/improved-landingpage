@@ -8,7 +8,7 @@ const HomePage = () => {
         <div>
 
             <Mainpage />
-            {/* <AboutCards /> */}
+            <AboutCards />
 
         </div>
     )
