@@ -7,20 +7,15 @@ import { MainSection } from './Namemainsection';
 import { isMobile } from '@/services/utility';
 
 const Mainpage = () => {
-    const [scrollY, setScrollY] = useState(0);
+    // const [scrollY, setScrollY] = useState(0);
     const parallaxRef = useRef<HTMLDivElement>(null);
 
-    const handleScroll = () => setScrollY(window.scrollY);
+    // const handleScroll = () => setScrollY(window.scrollY);
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const isMobile = () => {
-        return window.matchMedia("(max-width: 768px)").matches;
-    };
-    const overlayOpacity = Math.min(scrollY / 3300, 0.6);
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, []);
 
     return (
         <div>
@@ -32,7 +27,7 @@ const Mainpage = () => {
                 bgImageStyle={{
                     height: "100%",
                     width: '100%',
-                    ...(isMobile() && { objectFit: 'cover' })
+                    objectFit: 'cover'
                 }}
             >
                 <div ref={parallaxRef} style={{ position: 'relative', height: '80vh' }}>

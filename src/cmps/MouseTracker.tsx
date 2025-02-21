@@ -13,44 +13,54 @@ interface CloudTrailProps {
 
 const CloudTrail: React.FC<CloudTrailProps> = ({ containerRef }) => {
     const [clouds, setClouds] = useState<Cloud[]>([]);
+    const cloudRef = useRef<Cloud[]>([]); // Use ref to store clouds to avoid unnecessary re-renders
+
+    const maxClouds = 10; // Limit the number of clouds at once
+
+    const handleMouseMove = (e: MouseEvent) => {
+        const container = containerRef.current;
+        if (!container) return;
+
+        const rect = container.getBoundingClientRect();
+        const withinBounds =
+            e.clientX >= rect.left &&
+            e.clientX <= rect.right &&
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom;
+
+        if (!withinBounds) return;
+
+        const size = Math.random() * 20 + 40;
+        const uniqueId = `${Date.now()}-${Math.random()}`;
+
+        const newCloud: Cloud = {
+            id: uniqueId,
+            x: e.clientX - rect.left, // Relative to container
+            y: e.clientY - rect.top,
+            size,
+        };
+
+        if (cloudRef.current.length >= maxClouds) {
+            cloudRef.current.shift(); // Remove the oldest cloud to avoid memory bloat
+        }
+        cloudRef.current.push(newCloud);
+
+        setClouds([...cloudRef.current]);
+
+        setTimeout(() => {
+            cloudRef.current = cloudRef.current.filter(cloud => cloud.id !== newCloud.id);
+            setClouds([...cloudRef.current]); // Update state after cloud removal
+        }, 700);
+    };
 
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;
 
-        const handleMouseMove = (e: MouseEvent) => {
-            if (!container) return;
-
-            const rect = container.getBoundingClientRect();
-            const withinBounds =
-                e.clientX >= rect.left &&
-                e.clientX <= rect.right &&
-                e.clientY >= rect.top &&
-                e.clientY <= rect.bottom;
-
-            if (!withinBounds) return;
-
-            const size = Math.random() * 20 + 40;
-            const uniqueId = `${Date.now()}-${Math.random()}`;
-
-            const newCloud: Cloud = {
-                id: uniqueId,
-                x: e.clientX - rect.left, // Relative to container
-                y: e.clientY - rect.top,
-                size,
-            };
-
-            setClouds((prevClouds) => [...prevClouds, newCloud]);
-
-            setTimeout(() => {
-                setClouds((prevClouds) =>
-                    prevClouds.filter((cloud) => cloud.id !== newCloud.id)
-                );
-            }, 700);
-        };
-
         container.addEventListener('mousemove', handleMouseMove);
-        return () => container.removeEventListener('mousemove', handleMouseMove);
+        return () => {
+            container.removeEventListener('mousemove', handleMouseMove);
+        };
     }, [containerRef]);
 
     return (

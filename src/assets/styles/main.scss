@@ -1,13 +1,8 @@
 /* tailwind.scss */
 
-
-@use "setup/variables";
 @use "setup/functions";
-@use "setup/mixins";
-
 
 @use "basics/helpers";
-@use "basics/layout";
 @use "basics/base";
 
 @use "cmps/Scrollvelocity.scss";

@@ -1,21 +1,24 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import flyingrock from '../assets/img/flyrock.webp';
-import { MainSection } from './Namemainsection';
+import { throttle } from 'lodash';
 
 export function RockGrid() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
-    const handleMouseMove = (e: any) => {
-        const { clientX, clientY } = e;
-        const centerX = window.innerWidth / 2;
-        const centerY = window.innerHeight / 2;
+    const handleMouseMove = useCallback(
+        throttle((e: any) => {
+            const { clientX, clientY } = e;
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
 
-        // Adjust sensitivity
-        const moveX = (clientX - centerX) * 0.015;
-        const moveY = (clientY - centerY) * 0.015;
+            // Adjust sensitivity
+            const moveX = (clientX - centerX) * 0.015;
+            const moveY = (clientY - centerY) * 0.015;
 
-        setPosition({ x: moveX, y: moveY });
-    };
+            setPosition({ x: moveX, y: moveY });
+        }, 50),
+        []
+    );
 
     return (
         <section
@@ -26,20 +29,23 @@ export function RockGrid() {
                 transition: 'transform 0.10s ease-out',
             }}
         >
-
             {[...Array(6)].map((_, i) => (
                 <div
                     key={i}
-                    className={`max-w-[4rem] md:max-w-[8rem] flyingrock-container-${i}`}
+                    className={`max-w-[4rem] md:max-w-[8rem] flyingrock-container-${i} flyingrock`}
                     style={{
                         animation: `float ${5 + i}s ease-in-out infinite`,
                         animationDelay: `${i * 0.5}s`,
+                        willChange: 'transform',
                     }}
                 >
                     <img
-                        className='flyingrock'
+                        className='flyingrock-img'
                         src={flyingrock}
                         alt={`Rock ${i}`}
+                        width={300}
+                        height={300}
+                        loading="lazy"
                         style={{
                             transform: `rotate(${i * 10}deg)`,
                         }}
