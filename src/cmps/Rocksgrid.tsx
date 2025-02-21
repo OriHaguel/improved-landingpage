@@ -30,7 +30,7 @@ export function RockGrid() {
             {[...Array(6)].map((_, i) => (
                 <div
                     key={i}
-                    className={`max-w-[8rem] flyingrock-container-${i}`}
+                    className={`max-w-[4rem] md:max-w-[8rem] flyingrock-container-${i}`}
                     style={{
                         animation: `float ${5 + i}s ease-in-out infinite`,
                         animationDelay: `${i * 0.5}s`,

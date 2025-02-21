@@ -90,6 +90,8 @@ $third-color: rgb(217, 237, 146);
         @media(max-width: $card-breakpoint) {
             width: 385px;
             margin-bottom: 0;
+            margin-top: 4rem;
+
 
         }
 
@@ -158,8 +160,11 @@ $third-color: rgb(217, 237, 146);
             width: 100%;
             position: absolute;
             z-index: 10;
-            display: grid;
-            place-items: center;
+            // display: grid;
+            // place-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             .border-container {
                 height: 95%;
@@ -174,7 +179,7 @@ $third-color: rgb(217, 237, 146);
                     bottom: 2rem;
 
                     @media(max-width: $card-breakpoint) {
-                        bottom: .5rem;
+                        bottom: -1rem;
                     }
                 }
 
@@ -189,4 +194,8 @@ $third-color: rgb(217, 237, 146);
     color: #e5eadf;
     text-align: center;
     margin-top: 2rem;
+
+    @media(max-width: $card-breakpoint) {
+        margin-top: .25rem;
+    }
 }
