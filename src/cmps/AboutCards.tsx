@@ -5,6 +5,7 @@ import { isMobile } from '@/services/utility'
 import IconCloudDemo from './Iconcloud'
 import StyledText from './TextEffect'
 import { title } from 'process'
+import { HyperText } from '@/components/magicui/hyper-text'
 export function AboutCards() {
 
     const secondaryColor = '118, 200, 147'
@@ -51,9 +52,17 @@ export function AboutCards() {
                             <div>
                                 <StyledText color={`${design.titleColor}`} text={`${design.text}`} />
                                 {i === 1 && <p className="text-2xl tracking-wide  p-8 about-me-text">
-                                    I'm Ori Haguel, a Full-Stack Developer and Coding Academy graduate (640-hour bootcamp).
+                                    I'm  a Full-Stack Developer and Coding Academy graduate (640-hour bootcamp).
                                     I build reliable web apps with React, Redux, TypeScript, MongoDB and NestJS,
                                     always focusing on clean and maintainable code.</p>}
+
+                                {i === 2 && <p className="text-2xl tracking-wide  p-8 about-me-text">
+                                    <p>Error 404: Page Not Found.</p>
+
+                                    Although I don't have professional experience,
+                                    I have gained extensive hands-on experience by building my own projects.
+                                    I am actively seeking a full-stack developer position to apply my skills and contribute to a dynamic team.
+                                </p>}
                             </div>
 
 
