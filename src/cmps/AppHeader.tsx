@@ -51,7 +51,6 @@ export function AppHeader(): JSX.Element {
                 </button>
                 <nav className={`app-header__nav ${isMenuOpen ? 'open' : ''}`}>
                     <Link className="app-header__link" to="#" onClick={() => scrollToSection('about')}>About</Link>
-                    <Link className="app-header__link" to="#" onClick={() => scrollToSection('Technologies')}>Technologies</Link>
                     <Link className="app-header__link" to="#" onClick={() => scrollToSection('projects')}>Projects</Link>
                     <Link className="app-header__link" to="#" onClick={() => scrollToSection('contacts')}>Contacts</Link>
                 </nav>

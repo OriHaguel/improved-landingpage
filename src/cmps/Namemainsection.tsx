@@ -42,7 +42,7 @@ export function MainSection() {
                         {/* <HyperText className="name text-6xl">
                             Ori Haguel
                         </HyperText> */}
-                        <h1 className="name">Ori Haguel</h1>
+                        {/* <h1 className="name">Ori Haguel</h1> */}
                     </motion.h1>
                     <HyperText className="title">
                         Full Stack Developer

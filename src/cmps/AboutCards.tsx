@@ -5,7 +5,6 @@ import { isMobile } from '@/services/utility'
 import IconCloudDemo from './Iconcloud'
 import StyledText from './TextEffect'
 import { title } from 'process'
-import { HyperText } from '@/components/magicui/hyper-text'
 export function AboutCards() {
 
     const secondaryColor = '118, 200, 147'
@@ -35,7 +34,7 @@ export function AboutCards() {
         }
     ]
     return (
-        <section className="screen-container">
+        <section className="screen-container" id='about'>
             {styles.map((design, i) => (
 
 
@@ -51,18 +50,24 @@ export function AboutCards() {
                         >
                             <div>
                                 <StyledText color={`${design.titleColor}`} text={`${design.text}`} />
-                                {i === 1 && <p className="text-2xl tracking-wide  p-8 about-me-text">
-                                    I'm  a Full-Stack Developer and Coding Academy graduate (640-hour bootcamp).
-                                    I build reliable web apps with React, Redux, TypeScript, MongoDB and NestJS,
-                                    always focusing on clean and maintainable code.</p>}
+                                {i === 1 && <section className='flex flex-col items-center'>
+                                    <div className="cta-container">
+                                        <a href='/src/assets/cv/cv.pdf' className="download-cv-btn" download="Ori_Haguel_CV.pdf" aria-label="Download Ori Haguel's CV">Download CV</a>
+                                    </div>                                    <p className=" tracking-wide  p-4 about-me-text">
+                                        I'm  a Full-Stack Developer and Coding Academy graduate (640-hour bootcamp).
+                                        I build reliable web apps with React, Redux, TypeScript, MongoDB and NestJS,
+                                        always focusing on clean and maintainable code.</p>  </section>}
 
-                                {i === 2 && <p className="text-2xl tracking-wide  p-8 about-me-text">
-                                    <p>Error 404: Page Not Found.</p>
 
-                                    Although I don't have professional experience,
-                                    I have gained extensive hands-on experience by building my own projects.
-                                    I am actively seeking a full-stack developer position to apply my skills and contribute to a dynamic team.
-                                </p>}
+
+                                {i === 2 &&
+                                    <p className="tracking-wide  p-4 about-me-text">
+                                        <span>Error 404: Page Not Found.</span>
+
+                                        Although I don't have professional experience,
+                                        I have gained extensive hands-on experience by building my own projects.
+                                        I am actively seeking a full-stack developer position to apply my skills and contribute to a dynamic team.
+                                    </p>}
                             </div>
 
 

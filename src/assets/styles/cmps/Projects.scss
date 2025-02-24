@@ -1,0 +1,20 @@
+.project-container {
+    grid-column-gap: 18rem;
+    grid-row-gap: 18rem;
+    padding-top: 1.5rem;
+    min-height: 110vh;
+    width: 100%;
+
+    .full-img {
+        object-fit: cover;
+        width: 100%;
+        max-width: none;
+        height: 108%;
+        position: absolute;
+        inset: 0% 0% auto;
+        will-change: transform;
+        transform: translate3d(0px, 5%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        z-index: -1000;
+    }
+}
