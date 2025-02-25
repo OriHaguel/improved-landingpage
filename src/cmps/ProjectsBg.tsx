@@ -26,7 +26,7 @@ export function ProjectsBg() {
                     transform: isMobile()
                         ? scrolly < 65.78212290502793
                             ? `translate3d(0px, ${scrolly * 4 - 270}px, 0px) scale3d(1, 1, 1)`
-                            : `translate3d(0px, ${65.78212290502793 * 4 - 270}px, 0px) scale3d(1, 1, 1)`
+                            : `translate3d(0px, ${65.78212290502793 * 4 - 350}px, 0px) scale3d(1, 1, 1)`
                         : scrolly < 50
                             ? `translate3d(0px, ${scrolly * 4 - 250}px, 0px) scale3d(1, 1, 1)`
                             : `translate3d(0px, ${49.95857497928749 * 4 - 250}px, 0px) scale3d(1, 1, 1)`,
