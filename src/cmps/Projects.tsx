@@ -16,11 +16,13 @@ export function Projects() {
 
     return (
         <section className="relative project-container">
+            <h1 className="sticky top-[15px] text-large-size font-bold text-center uppercase text-white scramble-text title-wrap">My Projects</h1>
             <img
+                loading="lazy"
                 className="full-img"
-                src="src/assets/img/porject-bg.jpg"
+                src="src/assets/img/project-bg.webp"
                 style={{
-                    transform: `translate3d(0px, ${scrolly * 3 + -200}px, 0px) scale3d(1, 1, 1)`
+                    transform: `translate3d(0px, ${scrolly * 4 + -350}px, 0px) scale3d(1, 1, 1)`
                 }}
             />
         </section>

@@ -1,9 +1,14 @@
+$normal-breakpoint: 960px;
+
+
 .project-container {
-    grid-column-gap: 18rem;
-    grid-row-gap: 18rem;
     padding-top: 1.5rem;
-    min-height: 110vh;
+    min-height: 90vh;
     width: 100%;
+
+    @media(max-width: $normal-breakpoint) {
+        min-height: 100vh;
+    }
 
     .full-img {
         object-fit: cover;
@@ -16,5 +21,13 @@
         transform: translate3d(0px, 5%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
         transform-style: preserve-3d;
         z-index: -1000;
+    }
+
+    h1 {
+        font-size: 7.5rem;
+
+        @media(max-width: $normal-breakpoint) {
+            font-size: 2.5rem;
+        }
     }
 }
