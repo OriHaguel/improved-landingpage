@@ -1,6 +1,7 @@
 import { isMobile } from "@/services/utility";
 import { scroll } from "motion";
 import { useState, useEffect } from "react";
+import projBg from '../assets/img/project-bg.webp'
 export function ProjectsBg() {
     const [scrolly, setScrolly] = useState(0);
 
@@ -20,7 +21,7 @@ export function ProjectsBg() {
             <img
                 // loading="lazy"
                 className="full-img"
-                src="src/assets/img/project-bg.webp"
+                src={projBg}
                 style={{
                     transform: isMobile()
                         ? scrolly < 65.78212290502793
