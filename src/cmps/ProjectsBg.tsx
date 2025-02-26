@@ -13,7 +13,7 @@ export function ProjectsBg() {
         return () => unsubscribe(); // Cleanup on unmount
     }, []);
 
-    console.log("🚀 ~ Projects ~ scrolly:", scrolly);
+    // console.log("🚀 ~ Projects ~ scrolly:", scrolly);
 
     return (
         <section className="sticky top-0 project-bg-container">
@@ -25,7 +25,7 @@ export function ProjectsBg() {
                 style={{
                     transform: isMobile()
                         ? scrolly < 65.78212290502793
-                            ? `translate3d(0px, ${scrolly * 4 - 270}px, 0px) scale3d(1, 1, 1)`
+                            ? `translate3d(0px, ${scrolly * 4 - 350}px, 0px) scale3d(1, 1, 1)`
                             : `translate3d(0px, ${65.78212290502793 * 4 - 350}px, 0px) scale3d(1, 1, 1)`
                         : scrolly < 50
                             ? `translate3d(0px, ${scrolly * 4 - 250}px, 0px) scale3d(1, 1, 1)`
