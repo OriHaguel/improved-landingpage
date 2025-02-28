@@ -19,7 +19,7 @@ export function ProjectsBg() {
         <section className="sticky top-0 project-bg-container">
             <h1 className="sticky top-[15px] text-large-size font-bold text-center uppercase text-white scramble-text title-wrap">My Projects</h1>
             <img
-                // loading="lazy"
+                loading="lazy"
                 className="full-img"
                 src={projBg}
                 style={{
