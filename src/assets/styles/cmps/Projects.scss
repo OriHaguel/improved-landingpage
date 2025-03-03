@@ -5,7 +5,7 @@ $normal-breakpoint: 960px;
 
     .project-bg-container {
         padding-top: 1.5rem;
-        min-height: 90vh;
+        min-height: 91vh;
         width: 100%;
         z-index: -1;
 
@@ -46,11 +46,14 @@ $normal-breakpoint: 960px;
 
             .parallax-effect-div {
 
+
+
                 &::before {
                     font-size: 10rem;
                     color: black;
-                    background-color: rgb(48, 131, 255);
                     content: "";
+                    background: linear-gradient(145deg, #282a2b, #676c71, #ccdce7);
+                    // background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
                     // background: inherit;
                     // filter: blur(6px);
                     position: absolute;

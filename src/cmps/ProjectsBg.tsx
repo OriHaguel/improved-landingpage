@@ -32,8 +32,6 @@ export function ProjectsBg() {
                             : `translate3d(0px, ${49.95857497928749 * 4 - 250}px, 0px) scale3d(1, 1, 1)`,
                 }}
 
-
-
             />
         </section>
     );
