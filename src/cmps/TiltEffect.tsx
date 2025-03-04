@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-export function Tilt() {
+export function Tilt({ imageUrl }: { imageUrl: string }) {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const tiltRef = useRef<HTMLDivElement>(null);
@@ -19,14 +19,14 @@ export function Tilt() {
     return (
         <div
             ref={tiltRef}
-            className="bg-[url('/src/assets/img/blueimountain.webp')] w-[min(85vw,500px)] h-[min(85vw,500px)] bg-cover bg-center mx-auto mt-[24px] lg:mt-0"
+            className={`bg-[url('${imageUrl}')] w-[min(85vw,500px)] h-[min(85vw,500px)] bg-cover bg-center mx-auto mt-[24px] lg:mt-0`}
             style={{
                 perspective: "1000px",
                 transform: isHovering
-                    ? `perspective(1000px) rotateY(${position.x * 15}deg) rotateX(${-position.y * 15}deg)`
+                    ? `perspective(1000px) rotateY(${position.x * 15}deg) rotateX(${-position.y * 15}deg) scale(1.05)`
                     : 'perspective(1000px)',
                 transformStyle: 'preserve-3d',
-                transition: 'transform 0.35s ease-out'
+                transition: 'transform 0.25s ease-out'
             }}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovering(true)}
