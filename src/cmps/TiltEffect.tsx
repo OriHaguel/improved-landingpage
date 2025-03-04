@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 
 export function Tilt({ imageUrl }: { imageUrl: string }) {
+    console.log("🚀 ~ Tilt ~ imageUrl:", imageUrl)
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const tiltRef = useRef<HTMLDivElement>(null);
@@ -19,8 +20,9 @@ export function Tilt({ imageUrl }: { imageUrl: string }) {
     return (
         <div
             ref={tiltRef}
-            className={`bg-[url('${imageUrl}')] w-[min(85vw,500px)] h-[min(85vw,500px)] bg-cover bg-center mx-auto mt-[24px] lg:mt-0`}
+            className={`w-[min(85vw,500px)] h-[min(85vw,500px)] bg-cover bg-center mx-auto mt-[24px] lg:mt-0`}
             style={{
+                backgroundImage: `url(${imageUrl})`,
                 perspective: "1000px",
                 transform: isHovering
                     ? `perspective(1000px) rotateY(${position.x * 15}deg) rotateX(${-position.y * 15}deg) scale(1.05)`
