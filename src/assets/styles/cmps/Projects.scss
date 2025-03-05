@@ -61,10 +61,19 @@ $normal-breakpoint: 960px;
             }
 
             .parallax-effect-div {
+
                 // background: linear-gradient(145deg, #104217, #ffffff);
                 // filter: blur(6px);
                 // background-image: url("src/assets/img/gighub.png");
+                div {
+                    .project-tilt {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 3rem;
+                    }
 
+                }
 
                 &::before {
                     font-size: 10rem;
@@ -84,4 +93,30 @@ $normal-breakpoint: 960px;
             }
         }
     }
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.dynamic-text {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #a727a9, #2562c4, #ffffff);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 8s infinite linear;
 }

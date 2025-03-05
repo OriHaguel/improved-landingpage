@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 
 export function Tilt({ imageUrl }: { imageUrl: string }) {
-    console.log("🚀 ~ Tilt ~ imageUrl:", imageUrl)
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const tiltRef = useRef<HTMLDivElement>(null);
@@ -18,9 +17,9 @@ export function Tilt({ imageUrl }: { imageUrl: string }) {
     };
 
     return (
-        <div
-            ref={tiltRef}
-            className={`w-[min(85vw,500px)] h-[min(85vw,500px)] bg-cover bg-center mx-auto mt-[24px] lg:mt-0`}
+
+        <div ref={tiltRef}
+            className={`project-tilt w-[min(85vw,500px)] h-[min(85vw,500px)] bg-cover bg-center mx-auto mt-[24px] lg:mt-0`}
             style={{
                 backgroundImage: `url(${imageUrl})`,
                 perspective: "1000px",
@@ -32,7 +31,9 @@ export function Tilt({ imageUrl }: { imageUrl: string }) {
             }}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-        />
+            onMouseLeave={() => setIsHovering(false)}>
+
+            <h1 className="dynamic-text">Dynamic Colors</h1>;
+        </div>
     );
 }
