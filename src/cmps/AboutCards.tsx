@@ -1,6 +1,6 @@
 import blueMountain from '../assets/img/blueimountain.webp'
 import yellowMountain from '../assets/img/yellowmountain.webp'
-import greenMountain from '../assets/img/yellowmountain.webp'
+import greenMountain from '../assets/img/greenmountain.webp'
 import { isMobile } from '@/services/utility'
 import IconCloudDemo from './Iconcloud'
 import StyledText from './TextEffect'

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-export function Tilt({ imageUrl }: { imageUrl: string }) {
+export function Tilt({ imageUrl, projecyName, textColors }: { imageUrl: string, projecyName: string, textColors: string }) {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const tiltRef = useRef<HTMLDivElement>(null);
@@ -33,7 +33,7 @@ export function Tilt({ imageUrl }: { imageUrl: string }) {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}>
 
-            <h1 className="dynamic-text">Dynamic Colors</h1>;
+            <h1 style={{ '--gradient': `linear-gradient(90deg,${textColors})` } as React.CSSProperties} className="dynamic-text">{projecyName}</h1>
         </div>
     );
 }
