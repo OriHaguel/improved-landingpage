@@ -33,13 +33,20 @@ export function ProjectsParallax() {
                     }} className='bg-parallax absolute inset-0 w-full h-full  overflow-hidden'>
                         <div className='parallax-effect-div bg-cover bg-no-repeat bg-center w-[100vw] h-[100vh] -z-1 bg-blur '>
                             <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-[min(85vw,500px)] mt-[-3rem] lg:mt-0 lg:grid lg:grid-cols-[1fr_min(85vw,500px)_1fr] lg:max-w-[1440px] lg:mx-auto'>
-                                <p className="ml-8 text-white text-1xl font-[600] w-[350px]"><span className="text-2xl">Technologies: </span>{project.technolegies}</p>
+                                <div className="lg:w-auto w-[min(85vw,500px)] mx-auto lg:mt-0 mt-[-5.2rem] lg:mr-12">
+                                    <p className="text-white text-3xl font-[600] ">{project.name}</p>
+                                    <small className="text-white text-1xl font-[600]">{project.subText}</small>
+                                </div>
+                                {/* <p className="ml-8 text-white text-1xl font-[600] w-[350px]"><span className="text-2xl">Technologies: </span>{project.technolegies}</p> */}
                                 <Tilt imageUrl={project.image} projecyName={project.name} textColors={project.colors} />
                                 <div className="w-[min(85vw,500px)] mx-auto mt-[1.5rem] pb-[3rem] lg:pb-0 lg:mt-0 lg:w-full lg:grid lg:place-items-center">
-                                    <div className="w-[250px]">
+                                    {/* <div className="w-[250px]">
                                         <p className="text-white text-2xl font-[600]">{project.name}</p>
                                         <small className="text-white font-[600]">{project.subText}</small>
-                                    </div>
+                                    </div> */}
+
+                                    <p className="lg:ml-8 text-white text-1xl font-[600] lg:mr-12"><span className="text-2xl">Technologies: </span>{project.technolegies}</p>
+
                                 </div>
                             </div>
                         </div>
