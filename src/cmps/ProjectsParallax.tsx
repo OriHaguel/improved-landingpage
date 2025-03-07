@@ -33,7 +33,7 @@ export function ProjectsParallax() {
                     }} className='bg-parallax absolute inset-0 w-full h-full  overflow-hidden'>
                         <div className='parallax-effect-div bg-cover bg-no-repeat bg-center w-[100vw] h-[100vh] -z-1 bg-blur '>
                             <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-[min(85vw,500px)] mt-[-3rem] lg:mt-0 lg:grid lg:grid-cols-[1fr_min(85vw,500px)_1fr] lg:max-w-[1440px] lg:mx-auto'>
-                                <div className="lg:w-auto w-[min(85vw,500px)] mx-auto lg:mt-0 mt-[-5.2rem] lg:mr-12">
+                                <div className="lg:w-auto w-[min(85vw,500px)] mx-auto lg:mt-0 mt-[-3rem] lg:mr-12">
                                     <p className="text-white text-3xl font-[600] ">{project.name}</p>
                                     <small className="text-white text-1xl font-[600]">{project.subText}</small>
                                 </div>
