@@ -1,6 +1,8 @@
-body {
-    font-family: "Poppins", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
+
+body {
+    font-family: 'Inter', sans-serif;
 }
 
 .main-section {
@@ -39,6 +41,7 @@ body {
     font-size: 1.75rem;
     color: #000103;
     margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .description {

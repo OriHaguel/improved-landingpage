@@ -17,7 +17,6 @@ export function Tilt({ imageUrl, projecyName, textColors }: { imageUrl: string, 
     };
 
     return (
-
         <div ref={tiltRef}
             className={`project-tilt w-[min(85vw,500px)] h-[min(85vw,500px)] bg-cover bg-center mx-auto mt-[24px] lg:mt-0`}
             style={{
@@ -33,7 +32,7 @@ export function Tilt({ imageUrl, projecyName, textColors }: { imageUrl: string, 
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}>
 
-            <h1 style={{ '--gradient': `linear-gradient(90deg,${textColors})` } as React.CSSProperties} className="dynamic-text">{projecyName}</h1>
+            {/* <h1 style={{ '--gradient': `linear-gradient(90deg,${textColors})` } as React.CSSProperties} className="dynamic-text">{projecyName}</h1> */}
         </div>
     );
 }

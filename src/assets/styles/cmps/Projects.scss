@@ -21,7 +21,7 @@ $normal-breakpoint: 960px;
 
     .project-bg-container {
         padding-top: 1.5rem;
-        min-height: 91vh;
+        min-height: 85vh;
         width: 100%;
         z-index: -1;
 
@@ -54,7 +54,7 @@ $normal-breakpoint: 960px;
 
 
     .parallax-main {
-
+        // margin-top: -100px;
         height: 100vh;
         position: sticky;
         top: 0;
@@ -71,7 +71,7 @@ $normal-breakpoint: 960px;
                 position: absolute;
                 inset: 0;
                 background: rgba(0, 0, 0, 0.6);
-                backdrop-filter: blur(5px);
+                backdrop-filter: blur(4px);
 
 
             }
@@ -89,16 +89,7 @@ $normal-breakpoint: 960px;
                         font-size: 3rem;
                         grid-column: 2;
 
-                        .dynamic-text {
-                            font-size: 3.3rem;
-                            font-weight: bold;
 
-                            background: var(--gradient);
-                            background-size: 300% 100%;
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            animation: gradientAnimation 8s infinite linear;
-                        }
                     }
 
                 }
@@ -121,4 +112,15 @@ $normal-breakpoint: 960px;
             }
         }
     }
+}
+
+.dynamic-text {
+    // font-size: 3.3rem;
+    font-weight: bold;
+
+    background: var(--gradient);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 8s infinite linear;
 }

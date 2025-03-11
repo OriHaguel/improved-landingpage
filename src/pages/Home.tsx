@@ -1,4 +1,5 @@
 import { AboutCards } from "@/cmps/AboutCards";
+import FormMsg from "@/cmps/FormMsg";
 import Mainpage from "@/cmps/Mainpage";
 import { Projects } from "@/cmps/Projects";
 import Lenis from "lenis";
@@ -22,6 +23,7 @@ const HomePage = () => {
             <Mainpage />
             <AboutCards />
             <Projects />
+            {/* <FormMsg /> */}
             {/* <div className="h-[100vh] bg-black"></div> */}
         </div>
     )
