@@ -34,7 +34,7 @@ const StyledText: React.FC<StyledTextProps> = ({
         <div className="flex items-center justify-center p-8 mt-8">
             <div className="relative">
                 {/* Main text */}
-                <h1 className="text-5xl font-bold tracking-wide text-white">
+                <h1 className="lg:text-5xl text-4xl font-bold tracking-wide text-white">
                     {text}
                     {/* Underline effect with a gradient from white to the base color */}
                     <span
@@ -44,7 +44,7 @@ const StyledText: React.FC<StyledTextProps> = ({
                 </h1>
 
                 {/* Decorative dots using derived color variations */}
-                <div className="absolute -right-4 -top-4 flex gap-1">
+                {/* <div className="absolute -right-4 -top-4 flex gap-1">
                     <span
                         className="w-2 h-2 rounded-full animate-pulse"
                         style={{ backgroundColor: lighterColor }}
@@ -57,7 +57,7 @@ const StyledText: React.FC<StyledTextProps> = ({
                         className="w-2 h-2 rounded-full animate-pulse delay-200"
                         style={{ backgroundColor: darkerColor }}
                     ></span>
-                </div>
+                </div> */}
             </div>
         </div>
     );

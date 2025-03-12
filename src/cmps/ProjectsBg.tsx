@@ -1,7 +1,8 @@
 import { isMobile } from "@/services/utility";
 import { scroll } from "motion";
 import { useState, useEffect } from "react";
-import projBg from '../assets/img/project-bg.webp'
+import projBg from '../assets/img/test.webp'
+// import projBg from '../assets/img/project-bg.webp'
 export function ProjectsBg() {
     const [scrolly, setScrolly] = useState(0);
 

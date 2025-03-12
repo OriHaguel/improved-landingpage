@@ -1,0 +1,10 @@
+$card-breakpoint: 1280px;
+$primary-color: rgb(217, 125, 84);
+$secondary-color: rgb(237, 237, 237);
+$third-color: rgb(30, 58, 95);
+
+:root {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --third-color: #{$third-color};
+}

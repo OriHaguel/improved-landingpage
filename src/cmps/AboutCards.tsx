@@ -7,30 +7,40 @@ import StyledText from './TextEffect'
 import { title } from 'process'
 export function AboutCards() {
 
-    const secondaryColor = '118, 200, 147'
-    const primaryColor = '30, 141, 227'
-    const thirdColor = '217, 237, 146'
+    const secondaryColor = '89, 157, 217'
+    const primaryColor = '176, 198, 217'
+    const thirdColor = '242, 235, 233'
+    const getCSSVariable = (name: string) =>
+        getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+    function extractNumbersAsString(rgb: string): string {
+        const matches = rgb.match(/\d+/g);
+        return matches ? matches.join(", ") : "";
+    }
+
+
+    console.log(extractNumbersAsString(getCSSVariable("--primary-color")))
     const styles = [
         {
-            color: primaryColor,
+            color: extractNumbersAsString(getCSSVariable("--primary-color")),
             mountainimg: blueMountain,
-            huecolor: 160,
+            huecolor: 190,
             text: 'Technologies',
-            titleColor: '#1e8de3'
+            titleColor: getCSSVariable("--primary-color")
         },
         {
-            color: secondaryColor,
+            color: extractNumbersAsString(getCSSVariable("--secondary-color")),
             mountainimg: greenMountain,
-            huecolor: 100,
+            huecolor: 180,
             text: 'About Me',
-            titleColor: '#76c893'
+            titleColor: getCSSVariable("--secondary-color")
         },
         {
-            color: thirdColor,
+            color: extractNumbersAsString(getCSSVariable("--third-color")),
             mountainimg: yellowMountain,
             huecolor: 40,
             text: 'Experience',
-            titleColor: '#d9ed92'
+            titleColor: getCSSVariable("--third-color")
         }
     ]
     return (
@@ -39,7 +49,7 @@ export function AboutCards() {
 
 
                 <div key={i} className="screen" style={{
-                    border: `3px solid rgb(${design.color}, 0.8)`,
+                    border: `2px solid rgb(${design.color}, 0.8)`,
                     backgroundColor: `rgb(${design.color}, 0.15)`
                 }}>
                     <div className="screen-content">
@@ -52,7 +62,7 @@ export function AboutCards() {
                                 <StyledText color={`${design.titleColor}`} text={`${design.text}`} />
                                 {i === 1 && <section className='flex flex-col items-center'>
                                     <div className="cta-container">
-                                        <a href='/src/assets/cv/cv.pdf' className="download-cv-btn" download="Ori_Haguel_CV.pdf" aria-label="Download Ori Haguel's CV">Download CV</a>
+                                        {/* <a href='/src/assets/cv/cv.pdf' className="download-cv-btn" download="Ori_Haguel_CV.pdf" aria-label="Download Ori Haguel's CV">Download CV</a> */}
                                     </div>                                    <p className=" tracking-wide  p-4 about-me-text">
                                         I'm  a Full-Stack Developer and Coding Academy graduate (640-hour bootcamp).
                                         I build reliable web apps with React, Redux, TypeScript, MongoDB and NestJS,
