@@ -1,3 +1,4 @@
+@use "../setup/variables" as *;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
 
@@ -29,7 +30,9 @@ body {
 .name {
     font-size: 4rem;
     font-weight: 700;
-    background: linear-gradient(45deg, #007bff, #00bcd4);
+    // background: linear-gradient(45deg, #007bff, #00bcd4);
+    background: linear-gradient(45deg, #FF432B, #FF8400);
+
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
@@ -103,13 +106,13 @@ body {
     }
 
     &.outline {
-        color: #3C43B6;
-        border: 2px solid #3C43B6;
+        color: $text-btn-secondary-color;
+        border: 2px solid $text-btn-secondary-color;
 
         &:hover {
             background-color: rgba(0, 123, 255, 0.05);
-            color: #ba2dba;
-            border-color: #ba2dba;
+            color: $text-btn-primary-color;
+            border-color: $text-btn-primary-color;
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }

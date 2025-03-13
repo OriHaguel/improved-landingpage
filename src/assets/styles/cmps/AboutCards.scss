@@ -102,7 +102,7 @@
             width: 100%;
             background-size: 300%;
             background-position: center;
-            filter: sepia(100%) hue-rotate(160deg);
+            // filter: sepia(100%) hue-rotate(160deg);
             opacity: 0.6;
             position: absolute;
             animation: pan-image 80s infinite linear;
@@ -192,7 +192,7 @@
 .about-me-text {
     font-size: 1.5rem;
     // font-weight: bold;
-    color: #e5eadf;
+    color: #f0f9ff;
     text-align: center;
     margin-top: 1rem;
 
@@ -210,7 +210,7 @@
         display: inline-block;
         padding: 1rem 2.5rem;
         // background-color: #007bff;
-        background: linear-gradient(135deg, #d0f8f0, #76c893);
+        background: linear-gradient(135deg, #d0d0f8, #5356DB);
 
         color: #fff;
         text-decoration: none;
@@ -218,7 +218,7 @@
         font-weight: 600;
         font-size: 1.1rem;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 6px #9eecb9;
+        box-shadow: 0 4px 6px #434372;
         position: relative;
         overflow: hidden;
 

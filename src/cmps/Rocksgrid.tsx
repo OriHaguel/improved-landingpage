@@ -1,5 +1,8 @@
 import { useState, useCallback } from 'react';
-import flyingrock from '../assets/img/flyrock.webp';
+
+import flyingrock from '../assets/img/cloud-png-isolated-transparent-background.png';
+// import flyingrock from '../assets/img/af89cd10-9c13-49e3-9d17-308339b80b26.png';
+// import flyingrock from '../assets/img/flyrock.webp';
 import { throttle } from 'lodash';
 
 export function RockGrid() {
@@ -27,6 +30,7 @@ export function RockGrid() {
             style={{
                 transform: `translate(${position.x}px, ${position.y}px)`,
                 transition: 'transform 0.10s ease-out',
+
             }}
         >
             {[...Array(6)].map((_, i) => (

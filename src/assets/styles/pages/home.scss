@@ -16,6 +16,7 @@ $normal-breakpoint: 960px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 90vh;
+    filter: blur(3px);
 
     .flyingrock-container-0 {
         grid-row: 1;

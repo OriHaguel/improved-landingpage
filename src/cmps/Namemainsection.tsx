@@ -38,7 +38,8 @@ export function MainSection() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
                 >
-                    <motion.h1 style={{ scale }}>
+                    <motion.h1 className="name" style={{ scale }}>
+                        Ori Haguel
                         {/* <HyperText className="name text-6xl">
                             Ori Haguel
                         </HyperText> */}

@@ -24,21 +24,21 @@ export function AboutCards() {
         {
             color: extractNumbersAsString(getCSSVariable("--primary-color")),
             mountainimg: blueMountain,
-            huecolor: 190,
+            huecolor: 180,
             text: 'Technologies',
             titleColor: getCSSVariable("--primary-color")
         },
         {
             color: extractNumbersAsString(getCSSVariable("--secondary-color")),
             mountainimg: greenMountain,
-            huecolor: 180,
+            huecolor: 230,
             text: 'About Me',
             titleColor: getCSSVariable("--secondary-color")
         },
         {
             color: extractNumbersAsString(getCSSVariable("--third-color")),
             mountainimg: yellowMountain,
-            huecolor: 40,
+            huecolor: 200,
             text: 'Experience',
             titleColor: getCSSVariable("--third-color")
         }
@@ -62,7 +62,7 @@ export function AboutCards() {
                                 <StyledText color={`${design.titleColor}`} text={`${design.text}`} />
                                 {i === 1 && <section className='flex flex-col items-center'>
                                     <div className="cta-container">
-                                        {/* <a href='/src/assets/cv/cv.pdf' className="download-cv-btn" download="Ori_Haguel_CV.pdf" aria-label="Download Ori Haguel's CV">Download CV</a> */}
+                                        <a href='/src/assets/cv/cv.pdf' className="download-cv-btn" download="Ori_Haguel_CV.pdf" aria-label="Download Ori Haguel's CV">Download CV</a>
                                     </div>                                    <p className=" tracking-wide  p-4 about-me-text">
                                         I'm  a Full-Stack Developer and Coding Academy graduate (640-hour bootcamp).
                                         I build reliable web apps with React, Redux, TypeScript, MongoDB and NestJS,
