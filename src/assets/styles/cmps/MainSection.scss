@@ -54,11 +54,6 @@ body {
     margin: 0 auto;
 }
 
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
 
 .custom-button {
     display: inline-block;
@@ -73,6 +68,10 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
 
     &::before {
         content: '';
@@ -124,6 +123,11 @@ body {
     }
 }
 
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+}
 
 .social-icons {
     display: flex;
@@ -183,6 +187,10 @@ body {
 @media (max-width: 768px) {
     .name {
         font-size: 3rem;
+    }
+
+    .custom-button {
+        width: 10rem;
     }
 
     .title {

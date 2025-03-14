@@ -15,7 +15,7 @@ export function ProjectsParallax() {
             name: 'FiTrack',
             subText: 'Fitness tracker - track your progress',
             technolegies: 'React, Redux, TypeScript, Tailwind, NestJS, MongoDB',
-            colors: 'rgb(156, 85, 246),rgb(25, 141, 200),rgb(188, 233, 255)',
+            colors: 'rgb(195, 161, 239),rgb(25, 141, 200),rgb(188, 233, 255)',
             image: fitrack,
             bgImg: fitrackbg,
             link: 'https://fitnesstracker-ex8i.onrender.com/'
@@ -46,7 +46,16 @@ export function ProjectsParallax() {
                                     <small className="text-white font-[600]">{project.subText}</small>
                                     {/* <br /> */}
                                     {/* <p>fddsfdsfsfdsfsf</p> */}
-                                    <a className="font-[600] text-white text2xl block mt-2" href={project.link} target="_blank">View More </a>
+
+
+                                    <a className="block mt-4" href={project.link} target="_blank">
+                                        <span className="view-more font-[600] text-white text2xl">View More</span>
+                                    </a>
+                                    {/* <span
+                                        className="absolute -bottom-4 left-0 w-full h-1 rounded-full"
+                                        style={{ background: `linear-gradient(to right, white, ${project.colors})` }}
+                                    ></span> */}
+
                                 </div>
                                 <a href={project.link} target="_blank">
                                     {/* <p className="ml-8 text-white text-1xl font-[600] w-[350px]"><span className="text-2xl">Technologies: </span>{project.technolegies}</p> */}

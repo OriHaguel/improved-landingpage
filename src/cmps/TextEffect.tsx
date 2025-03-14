@@ -34,7 +34,7 @@ const StyledText: React.FC<StyledTextProps> = ({
         <div className="flex items-center justify-center p-8 mt-8">
             <div className="relative">
                 {/* Main text */}
-                <h1 className="lg:text-5xl text-4xl font-bold tracking-wide text-white">
+                <h1 className="cards-text font-bold tracking-wide text-white">
                     {text}
                     {/* Underline effect with a gradient from white to the base color */}
                     <span

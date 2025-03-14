@@ -31,14 +31,14 @@ export function AboutCards() {
         {
             color: extractNumbersAsString(getCSSVariable("--secondary-color")),
             mountainimg: greenMountain,
-            huecolor: 230,
+            huecolor: 190,
             text: 'About Me',
             titleColor: getCSSVariable("--secondary-color")
         },
         {
             color: extractNumbersAsString(getCSSVariable("--third-color")),
             mountainimg: yellowMountain,
-            huecolor: 200,
+            huecolor: 190,
             text: 'Experience',
             titleColor: getCSSVariable("--third-color")
         }
@@ -49,7 +49,7 @@ export function AboutCards() {
 
 
                 <div key={i} className="screen" style={{
-                    border: `2px solid rgb(${design.color}, 0.8)`,
+                    // border: `2px solid rgb(${design.color}, 0.8)`,
                     backgroundColor: `rgb(${design.color}, 0.15)`
                 }}>
                     <div className="screen-content">

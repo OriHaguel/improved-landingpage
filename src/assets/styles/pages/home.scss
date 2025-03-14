@@ -11,12 +11,13 @@ $normal-breakpoint: 960px;
         -20px 0 30px rgba(255, 255, 255, 0.4);
 }
 
+//crita
 .flyingrock-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 90vh;
-    filter: blur(3px);
+    // filter: blur(1px);
 
     .flyingrock-container-0 {
         grid-row: 1;

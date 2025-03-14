@@ -69,6 +69,7 @@
     background-color: rgb(22, 22, 22);
     padding-bottom: 3rem;
 
+
     @media(max-width: $card-breakpoint) {
         // grid-template-rows: repeat(3, 1fr);
         grid-template-columns: 1fr; // Makes it a single-column layout
@@ -92,6 +93,7 @@
             width: 95vw;
             margin-bottom: 0;
             margin-top: 4rem;
+
 
 
         }
@@ -190,6 +192,7 @@
 }
 
 .about-me-text {
+    // font-size: clamp(1rem, 1.5vw, 1.5rem);
     font-size: 1.5rem;
     // font-weight: bold;
     color: #f0f9ff;
@@ -198,6 +201,10 @@
 
     @media(max-width: $card-breakpoint) {
         margin-top: .25rem;
+    }
+
+    @media(max-width: $small-card-breakpoint) {
+        font-size: clamp(.5rem, 5vw, 1.5rem);
     }
 }
 
@@ -247,5 +254,20 @@
             transform: translateY(0);
             // box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
         }
+    }
+}
+
+.cards-text {
+    font-size: 3rem;
+    // font-size: clamp(1rem, 3.5vw, 3rem);
+
+    @media(max-width: $card-breakpoint) {
+        font-size: 3.5rem;
+
+
+    }
+
+    @media(max-width: $small-card-breakpoint) {
+        font-size: clamp(0.8rem, 12vw, 3rem);
     }
 }
