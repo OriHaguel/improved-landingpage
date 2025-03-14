@@ -48,7 +48,7 @@ export function ProjectsParallax() {
                                     {/* <p>fddsfdsfsfdsfsf</p> */}
 
 
-                                    <a className="block mt-4" href={project.link} target="_blank">
+                                    <a className="view-more-container block mt-4" href={project.link} target="_blank">
                                         <span className="view-more font-[600] text-white text2xl">View More</span>
                                     </a>
                                     {/* <span
