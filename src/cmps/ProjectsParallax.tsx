@@ -1,7 +1,7 @@
 import { Tilt } from "./TiltEffect";
 import gighubbg from '../../src/assets/img/gighub.webp'
-import gighub from '../../src/assets/img/smallgighub.png'
-import fitrack from '../../src/assets/img/smallfitracker.png'
+import gighub from '../../src/assets/img/smallgighub.webp'
+import fitrack from '../../src/assets/img/smallfitracker.webp'
 import fitrackbg from '../../src/assets/img/fitrack.webp'
 
 import blueMountain from '../assets/img/blueimountain.webp'

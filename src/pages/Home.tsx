@@ -1,6 +1,7 @@
 import { AboutCards } from "@/cmps/AboutCards";
 import FormMsg from "@/cmps/FormMsg";
 import Mainpage from "@/cmps/Mainpage";
+import MaskHover from "@/cmps/MaskHover";
 import { Projects } from "@/cmps/Projects";
 import Lenis from "lenis";
 import { useEffect } from "react";
@@ -18,13 +19,17 @@ const HomePage = () => {
 
     }, [])
 
+
+
+
+
     return (
         <div>
             <Mainpage />
-            <AboutCards />
+            {/* <AboutCards /> */}
+            <MaskHover />
             <Projects />
             {/* <FormMsg /> */}
-            {/* <div className="h-[100vh] bg-black"></div> */}
         </div>
     )
 };
