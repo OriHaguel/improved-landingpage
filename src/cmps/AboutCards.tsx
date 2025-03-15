@@ -1,22 +1,16 @@
 import blueMountain from '../assets/img/blueimountain.webp'
 import yellowMountain from '../assets/img/yellowmountain.webp'
 import greenMountain from '../assets/img/greenmountain.webp'
-import { isMobile } from '@/services/utility'
+import { extractNumbersAsString, getCSSVariable, isMobile } from '@/services/utility'
 import IconCloudDemo from './Iconcloud'
 import StyledText from './TextEffect'
 import { title } from 'process'
 export function AboutCards() {
 
-    const secondaryColor = '89, 157, 217'
-    const primaryColor = '176, 198, 217'
-    const thirdColor = '242, 235, 233'
-    const getCSSVariable = (name: string) =>
-        getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    // const secondaryColor = '89, 157, 217'
+    // const primaryColor = '176, 198, 217'
+    // const thirdColor = '242, 235, 233'
 
-    function extractNumbersAsString(rgb: string): string {
-        const matches = rgb.match(/\d+/g);
-        return matches ? matches.join(", ") : "";
-    }
 
 
     console.log(extractNumbersAsString(getCSSVariable("--primary-color")))

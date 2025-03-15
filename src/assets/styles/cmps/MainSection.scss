@@ -105,8 +105,8 @@ body {
     }
 
     &.outline {
-        color: $text-btn-secondary-color;
-        border: 2px solid $text-btn-secondary-color;
+        color: $text-btn-middle-color;
+        border: 2px solid $text-btn-middle-color;
 
         &:hover {
             background-color: rgba(0, 123, 255, 0.05);
