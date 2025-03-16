@@ -31,7 +31,7 @@ const Mainpage = () => {
                 }}
             >
                 <div ref={parallaxRef} style={{ position: 'relative', height: '80vh' }}>
-                    {!isMobile() && <CloudTrail containerRef={parallaxRef} />}
+                    {/* {!isMobile() && <CloudTrail containerRef={parallaxRef} />} */}
                     <div
                         style={{
                             position: 'absolute',

@@ -1,6 +1,8 @@
+@use "../setup/variables" as *;
+
 .main {
     height: 100vh;
-    background-color: black;
+    background-color: rgb(17, 17, 17);
 
     .mask,
     .body {
@@ -14,9 +16,21 @@
         line-height: 66px;
         cursor: default;
 
+        @media (max-width: $mobile-breakpoint) {
+
+            font-size: 2.5rem;
+        }
+
         p {
             width: 1000px;
             padding: 40px;
+
+            @media (max-width: $mobile-breakpoint) {
+
+                width: auto;
+                padding: 0px;
+            }
+
         }
 
         span {

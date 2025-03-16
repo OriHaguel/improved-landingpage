@@ -9,7 +9,10 @@ import { useEffect } from "react";
 const HomePage = () => {
     useEffect(() => {
 
-        const lenis = new Lenis()
+        const lenis = new Lenis({
+            // lerp: 0.009
+            // duration: 1.5
+        })
         function raf(time: any) {
             lenis.raf(time)
             requestAnimationFrame(raf)
