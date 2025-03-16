@@ -1,14 +1,12 @@
 
 // import styles from "./page.module.scss";
-import { useEffect, useState } from "react";
-import { motion, scroll } from "framer-motion";
-import useMousePosition from "./useMousePosition";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { isMobile, numberToHover } from "@/services/utility";
 
 
 export default function MaskHover() {
     const [isHovered, setIsHovered] = useState<boolean>(false);
-    // const { x, y } = useMousePosition();
     const size: number = isHovered ? 400 : 40;
     const [coords, setCoords] = useState({ x: 0, y: 0 });
 
@@ -18,7 +16,6 @@ export default function MaskHover() {
     return (
 
         <main className='main' onMouseMove={(e) => setCoords({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY })}>
-
             {!isMobile() && <motion.div
                 className='mask'
                 // animate={{
@@ -39,7 +36,18 @@ export default function MaskHover() {
                     A visual designer - with skills that haven't been replaced by A.I (yet) - making good shit only if the paycheck is equally good.
                 </p>
             </motion.div>}
+
+
+
+
+
+
+            <div className="about-me-con">
+                <p className="about-me text-white">About me</p>
+            </div>
+
             <div className='body'>
+
                 <p>
                     I'm a <span>selectively skilled</span> product designer with a strong focus on producing high-quality & impactful digital experiences.
                 </p>

@@ -4,9 +4,14 @@ export const isMobile = () => {
 export function numberToHover() {
     const breakpoints = [
         { width: 1000, value: 0 },
+        { width: 1100, value: 40 },
         { width: 1200, value: 90 },
-        { width: 1400, value: 180 },
-        { width: 1700, value: 320 },
+        { width: 1300, value: 140 },
+        { width: 1400, value: 190 },
+        { width: 1500, value: 240 },
+        { width: 1600, value: 290 },
+        { width: 1700, value: 340 },
+        { width: 1800, value: 390 },
         { width: 1920, value: 450 }
     ];
 

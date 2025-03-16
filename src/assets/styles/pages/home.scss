@@ -1,4 +1,4 @@
-$normal-breakpoint: 960px;
+@use "../setup/variables" as *;
 
 .cloud {
     width: 50px;
@@ -30,6 +30,10 @@ $normal-breakpoint: 960px;
             grid-column: 3;
             align-items: end;
         }
+
+        @media(max-width: $small-card-breakpoint) {
+            opacity: 0;
+        }
     }
 
     .flyingrock-container-1 {
@@ -46,6 +50,8 @@ $normal-breakpoint: 960px;
 
 
         }
+
+
     }
 
     .flyingrock-container-2 {
@@ -58,6 +64,10 @@ $normal-breakpoint: 960px;
             align-items: start;
             margin-top: 3rem;
 
+        }
+
+        @media(max-width: $small-card-breakpoint) {
+            opacity: 0;
         }
     }
 
@@ -75,6 +85,8 @@ $normal-breakpoint: 960px;
             margin-top: 4rem;
 
         }
+
+
     }
 
     .flyingrock-container-4 {
@@ -84,6 +96,10 @@ $normal-breakpoint: 960px;
         display: flex;
         align-items: end;
         justify-self: start;
+
+        @media(max-width: $small-card-breakpoint) {
+            opacity: 0;
+        }
     }
 
     .flyingrock-container-5 {

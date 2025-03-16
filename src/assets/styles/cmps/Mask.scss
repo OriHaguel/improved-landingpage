@@ -2,7 +2,8 @@
 
 .main {
     height: 100vh;
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(14, 14, 14);
+    position: relative;
 
     .mask,
     .body {
@@ -16,9 +17,12 @@
         line-height: 66px;
         cursor: default;
 
-        @media (max-width: $mobile-breakpoint) {
 
-            font-size: 2.5rem;
+        @media (max-width: $mobile-breakpoint) {
+            padding: 1.25rem;
+            font-size: 2.7rem;
+            line-height: 45px;
+
         }
 
         p {
@@ -34,7 +38,7 @@
         }
 
         span {
-            color: #ec4e39;
+            color: $hover-color;
         }
     }
 
@@ -42,8 +46,39 @@
         mask-image: url('../../../../src/assets/svg/mask.svg');
         mask-repeat: no-repeat;
         mask-size: 40px;
-        background: #ec4e39;
+        background: $hover-color;
         position: absolute;
         color: black;
     }
+
+    .about-me-con {
+        // width: 50%;
+        // height: 100%;
+
+
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @media (max-width: $mobile-breakpoint) {
+
+            top: 3%;
+        }
+
+        .about-me {
+            color: #afa18f;
+            padding: 0;
+            padding-top: 5rem;
+            // width: 100%;
+            font-size: 3rem;
+
+            @media (max-width: $mobile-breakpoint) {
+
+                font-size: 2rem;
+            }
+
+        }
+    }
+
 }
