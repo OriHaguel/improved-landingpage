@@ -43,7 +43,7 @@
     }
 
     .mask {
-        mask-image: url('../../../../src/assets/svg/mask.svg');
+        mask-image: url('/svg/mask.svg');
         mask-repeat: no-repeat;
         mask-size: 40px;
         background: $hover-color;
