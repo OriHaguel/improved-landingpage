@@ -1,4 +1,3 @@
-import { AboutCards } from "@/cmps/AboutCards";
 import FormMsg from "@/cmps/FormMsg";
 import Mainpage from "@/cmps/Mainpage";
 import MaskHover from "@/cmps/MaskHover";
@@ -28,10 +27,10 @@ const HomePage = () => {
 
     return (
         <div>
-            <Mainpage />
+            {/* <Mainpage /> */}
             {/* <AboutCards /> */}
-            <MaskHover />
-            <Projects />
+            {/* <MaskHover /> */}
+            {/* <Projects /> */}
             {/* <FormMsg /> */}
         </div>
     )

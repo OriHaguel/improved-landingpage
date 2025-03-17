@@ -1,10 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useRef } from 'react';
 import { Parallax } from 'react-parallax';
 import sky from '../assets/img/freepik__dd-more-rocks__84491 (1).webp';
 import { RockGrid } from './Rocksgrid';
-import CloudTrail from './MouseTracker';
 import { MainSection } from './Namemainsection';
-import { isMobile } from '@/services/utility';
+
 
 const Mainpage = () => {
     // const [scrollY, setScrollY] = useState(0);
@@ -31,7 +30,6 @@ const Mainpage = () => {
                 }}
             >
                 <div ref={parallaxRef} style={{ position: 'relative', height: '80vh' }}>
-                    {/* {!isMobile() && <CloudTrail containerRef={parallaxRef} />} */}
                     <div
                         style={{
                             position: 'absolute',
