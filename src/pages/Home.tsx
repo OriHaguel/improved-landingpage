@@ -27,10 +27,9 @@ const HomePage = () => {
 
     return (
         <div>
-            {/* <Mainpage /> */}
-            {/* <AboutCards /> */}
-            {/* <MaskHover /> */}
-            {/* <Projects /> */}
+            <Mainpage />
+            <MaskHover />
+            <Projects />
             {/* <FormMsg /> */}
         </div>
     )
