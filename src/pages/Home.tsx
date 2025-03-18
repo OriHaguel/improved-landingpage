@@ -1,6 +1,7 @@
 import FormMsg from "@/cmps/FormMsg";
 import Mainpage from "@/cmps/Mainpage";
 import MaskHover from "@/cmps/MaskHover";
+import { MaskText } from "@/cmps/MaskTextAnimation";
 import { Projects } from "@/cmps/Projects";
 import Lenis from "lenis";
 import { useEffect } from "react";
@@ -30,6 +31,9 @@ const HomePage = () => {
             <Mainpage />
             <MaskHover />
             <Projects />
+            {/* <div className="h-[100vh]">
+                <MaskText phrase={'ori haguel'} />
+            </div> */}
             {/* <FormMsg /> */}
         </div>
     )

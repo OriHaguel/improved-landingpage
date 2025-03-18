@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-export function Tilt({ imageUrl, projecyName, textColors }: { imageUrl: string, projecyName: string, textColors: string }) {
+export function Tilt({ imageUrl }: { imageUrl: string, projecyName: string, textColors: string }) {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const tiltRef = useRef<HTMLDivElement>(null);

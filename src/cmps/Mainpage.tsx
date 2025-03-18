@@ -6,15 +6,7 @@ import { MainSection } from './Namemainsection';
 
 
 const Mainpage = () => {
-    // const [scrollY, setScrollY] = useState(0);
     const parallaxRef = useRef<HTMLDivElement>(null);
-
-    // const handleScroll = () => setScrollY(window.scrollY);
-
-    // useEffect(() => {
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // }, []);
 
     return (
         <div>
@@ -37,7 +29,6 @@ const Mainpage = () => {
                             left: 0,
                             width: '100%',
                             height: '100vh',
-                            // backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})`,
                             transition: 'background-color 0.1s ease',
                             pointerEvents: 'none',
                         }}

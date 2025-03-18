@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { isMobile, numberToHover } from "@/services/utility";
+import { MaskText } from "./MaskTextAnimation";
 
 
 export default function MaskHover() {
@@ -15,7 +16,7 @@ export default function MaskHover() {
 
     return (
 
-        <main className='main' onMouseMove={(e) => setCoords({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY })}>
+        <main className='main' onMouseMove={(e) => setCoords({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY })} id="about">
             {!isMobile() && <motion.div
                 className='mask'
                 // animate={{
@@ -44,7 +45,8 @@ export default function MaskHover() {
 
 
             <div className="about-me-con">
-                <p className="about-me text-white">About me</p>
+                {/* <p className="about-me text-white">About me</p> */}
+                <MaskText phrase="About Me" cn="about-me" />
             </div>
 
             <div className='body'>
@@ -52,12 +54,6 @@ export default function MaskHover() {
                 <p>
                     {/* I'm a <span>selectively skilled</span> product designer with a strong focus on producing high-quality & impactful digital experiences. */}
                     I'm a <span>dedicated</span> full-stack developer focused on building reliable, scalable applications with clean code and smooth user experiences.
-
-
-
-
-
-
 
                 </p>
             </div>

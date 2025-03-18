@@ -1,6 +1,7 @@
 import { HyperText } from "@/components/magicui/hyper-text";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useMemo } from "react";
+import { MaskText } from "./MaskTextAnimation";
 
 export function MainSection() {
     const { scrollY } = useScroll();
@@ -38,13 +39,12 @@ export function MainSection() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
                 >
-                    <motion.h1 className="name" style={{ scale }}>
+                    <motion.div className="name" style={{ scale }}>
+                        {/* <MaskText phrase="Ori Haguel" /> */}
                         Ori Haguel
-                        {/* <HyperText className="name text-6xl">
-                            Ori Haguel
-                        </HyperText> */}
+
                         {/* <h1 className="name">Ori Haguel</h1> */}
-                    </motion.h1>
+                    </motion.div>
                     <HyperText className="title">
                         Full Stack Developer
                     </HyperText>

@@ -1,6 +1,5 @@
 import { useState, useCallback } from 'react';
 
-// import flyingrock from '../assets/img/cloud-png-isolated-transparent-background.png';
 // import flyingrock from '../assets/img/idknomore.png';
 import flyingrock from '../assets/img/84e36897-38e2-4123-b7cc-9a06698e1253.png';
 // import flyingrock from '../assets/img/af89cd10-9c13-49e3-9d17-308339b80b26.png';
@@ -51,7 +50,6 @@ export function RockGrid() {
                         alt={`Rock ${i}`}
                         width={300}
                         height={300}
-                        loading="lazy"
                         style={{
                             transform: `rotate(${i * 10}deg)`,
                         }}
