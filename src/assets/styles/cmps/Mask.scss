@@ -12,7 +12,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #afa18f;
+        color: $mask-color-txt;
         font-size: 64px;
         line-height: 66px;
         cursor: default;
@@ -63,7 +63,7 @@
         }
 
         .about-me {
-            color: #afa18f;
+            color: $mask-color-txt;
             padding: 0;
             padding-top: 5rem;
             font-size: 3.5rem;

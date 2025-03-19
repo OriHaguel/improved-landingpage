@@ -1,0 +1,124 @@
+@use "../setup/variables" as *;
+
+
+.contact-container {
+
+    background-color: #121212;
+    width: 100vw;
+
+
+
+    .form-container {
+        grid-row: 2;
+        width: 500px;
+        height: auto;
+        margin: auto;
+
+
+        // @media (max-width: $mobile-breakpoint) {
+        //     width: 90vw;
+        //     height: auto;
+        //     grid-column: 1;
+        //     display: flex;
+        //     justify-content: center;
+        // }
+
+        .contact-form {
+            background-color: #0f0f0f;
+            padding: 4rem;
+
+            // @media (max-width: $card-breakpoint) {
+            //     padding: 2rem;
+            // }
+        }
+    }
+
+    .contact-txt-container {
+
+        .contact-txt {
+            color: $mask-color-txt;
+            font-size: 3.5rem;
+            line-height: 3rem;
+            font-weight: bold;
+
+
+        }
+    }
+}
+
+// .contact-container {
+//     display: grid;
+//     background-color: #121212;
+//     height: 90vh;
+//     grid-template-columns: 1fr 600px 50px 600px 1fr;
+//     // grid-template-columns: 50px 1fr 1fr 50px;
+//     grid-template-rows: 1fr 1fr 1fr;
+
+
+//     @media (max-width: $card-breakpoint) {
+//         grid-template-columns: 1fr;
+//         grid-template-rows: 1fr 1fr;
+//         // grid-template-columns: 1fr 600px 600px 1fr;
+//     }
+
+//     .form-container {
+//         grid-column: 4;
+//         grid-row: 2;
+//         width: 500px;
+//         height: auto;
+//         margin: auto;
+
+
+//         @media (max-width: $mobile-breakpoint) {
+//             width: 90vw;
+//             height: auto;
+//             grid-column: 1;
+//             display: flex;
+//             justify-content: center;
+//         }
+
+//         .contact-form {
+//             background-color: #0f0f0f;
+//             padding: 4rem;
+
+//             @media (max-width: $card-breakpoint) {
+//                 padding: 2rem;
+//             }
+//         }
+//     }
+
+//     .contact-txt-container {
+
+//         grid-column: 2;
+//         grid-row: 2;
+//         text-align: start;
+//         width: 100%;
+//         display: flex;
+//         justify-content: end;
+
+//         @media (max-width: $card-breakpoint) {
+//             grid-column: 1;
+//             grid-row: 1;
+//         }
+
+//         @media (max-width: $mobile-breakpoint) {
+//             justify-content: center;
+//         }
+
+//         .contact-txt {
+//             color: $mask-color-txt;
+//             font-size: 3.5rem;
+//             line-height: 3rem;
+//             font-weight: bold;
+//             display: flex;
+//             // width: 90%;
+
+//             // @media (max-width: $card-breakpoint) {
+//             //     margin-left: 0;
+//             //     margin: auto;
+
+//             // }
+//             @media (max-width: $mobile-breakpoint) {}
+//         }
+//     }
+// }

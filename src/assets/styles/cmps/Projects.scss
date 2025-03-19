@@ -1,3 +1,6 @@
+@use "../setup/variables" as *;
+
+
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -11,6 +14,7 @@
         background-position: 0% 50%;
     }
 }
+
 
 
 .projects-container {
@@ -142,6 +146,13 @@
 }
 
 .my-proj-txt {
-    color: #fff7ee;
+    // color: $mask-color-txt;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+    // color: #fff7ee;
+    background: linear-gradient(45deg, #ff4e36, #ff8400);
+    // color: rgb(246, 249, 250);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: clamp(2.5rem, 12.5vw, 8.5rem);
 }
