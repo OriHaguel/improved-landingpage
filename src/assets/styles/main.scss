@@ -1,18 +1,14 @@
 /* tailwind.scss */
 
-
-
 @use "setup/functions";
 @use "setup/variables";
 
 @use "basics/helpers";
 @use "basics/base";
 
-@use "cmps/Scrollvelocity.scss";
-@use "cmps/Bubbletext.scss";
+
 @use "cmps/AppHeader.scss";
 @use "cmps/MainSection.scss";
-@use "cmps/AboutCards.scss";
 @use "cmps/Projects.scss";
 @use "cmps/Mask.scss";
 @use "cmps/MaskText.scss";
