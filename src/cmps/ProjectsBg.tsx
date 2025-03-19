@@ -17,7 +17,7 @@ export function ProjectsBg() {
     return (
         <section className="sticky top-0 project-bg-container" >
             {/* <h1 className="sticky top-[15px] text-large-size font-bold text-center uppercase text-white scramble-text title-wrap"> My Projects</h1> */}
-            <h1 className="sticky top-[15px]  text-center uppercase text-white scramble-text title-wrap"><MaskText phrase="My Projects" /></h1>
+            <h1 className="sticky top-[15px]  text-center uppercase text-white scramble-text title-wrap"><MaskText phrase="My Projects" cn="my-proj-txt" /></h1>
             <img
                 loading="lazy"
                 className="full-img"

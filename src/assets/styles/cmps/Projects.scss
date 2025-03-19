@@ -60,6 +60,7 @@ $normal-breakpoint: 960px;
         height: 100vh;
         position: sticky;
         top: 0;
+        font-family: 'Inter', sans-serif;
 
         .bg-parallax {
             object-fit: cover;
@@ -117,7 +118,7 @@ $normal-breakpoint: 960px;
 }
 
 .dynamic-text {
-    // font-size: 6.3rem;
+    font-size: 6.3rem;
     font-weight: bold;
 
     background: var(--gradient);
@@ -146,7 +147,7 @@ $normal-breakpoint: 960px;
             left: 0;
             width: 100%;
             height: 3px;
-            background-color: #fafff7;
+            background-color: #fbfff9;
             box-shadow: 0 0 5px rgba(52, 219, 69, 0.5);
             transform: translateX(-101%);
             transition: transform 0.3s ease;
@@ -154,4 +155,9 @@ $normal-breakpoint: 960px;
 
         }
     }
+}
+
+.my-proj-txt {
+    color: #fff7ee;
+    font-size: clamp(2.5rem, 12.5vw, 8.5rem);
 }
