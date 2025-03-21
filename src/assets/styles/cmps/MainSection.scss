@@ -17,7 +17,7 @@ body {
 
 .main-section {
     position: absolute;
-    top: 55%;
+    top: 58%;
     left: 50%;
     z-index: 1;
     transform: translate(-50%, -50%);
@@ -53,7 +53,7 @@ body {
     font-size: 1.75rem;
     color: #000103;
     margin-bottom: 1rem;
-    // font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .description {
@@ -118,8 +118,8 @@ body {
     &.outline {
         color: $text-btn-middle-color;
         border: 2px solid $text-btn-middle-color;
-        // border: 2px solid #f86713;
-        // color: #f86713;
+        // border: 2px solid rgb(111, 43, 28);
+        // color: rgb(111, 43, 28);
 
         /* Adjust text color for better contrast */
         &:hover {
@@ -177,7 +177,7 @@ body {
         svg {
             width: 26px;
             height: 26px;
-            fill: #000000;
+            fill: $text-btn-middle-color;
             transition: all 0.3s ease;
             z-index: 1;
         }

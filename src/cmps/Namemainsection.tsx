@@ -45,9 +45,10 @@ export function MainSection() {
 
                         {/* <h1 className="name">Ori Haguel</h1> */}
                     </motion.div>
-                    <HyperText className="title">
+                    {/* <HyperText className="title">
                         Full Stack Developer
-                    </HyperText>
+                    </HyperText> */}
+                    <h1 className="title"> Full Stack Developer</h1>
                 </motion.div>
                 <div className="social-icons">
                     {socialIcons}

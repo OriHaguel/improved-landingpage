@@ -1,50 +1,96 @@
 @use "../setup/variables" as *;
 
-
-.contact-container {
-
+.contact-page {
     background-color: #121212;
-    width: 100vw;
+    height: 100vh;
+    // width: 100vw;
+    // overflow: hidden;
 
-
-
-    .form-container {
-        grid-row: 2;
-        width: 500px;
-        height: auto;
+    .contact-container {
+        width: 1000px;
         margin: auto;
+        grid-column-gap: 2.5rem;
+        grid-row-gap: 2rem;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        // grid-auto-columns: 1fr;
+        height: 100%;
+        // min-height: min(100svh - 5.5rem, 55rem);
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: grid;
 
-
-        // @media (max-width: $mobile-breakpoint) {
-        //     width: 90vw;
-        //     height: auto;
-        //     grid-column: 1;
-        //     display: flex;
-        //     justify-content: center;
-        // }
-
-        .contact-form {
-            background-color: #0f0f0f;
-            padding: 4rem;
-
-            // @media (max-width: $card-breakpoint) {
-            //     padding: 2rem;
-            // }
+        @media (max-width: $card-breakpoint) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 90vw;
         }
-    }
 
-    .contact-txt-container {
+        .form-container {
+            grid-row: 2;
+            width: 500px;
 
-        .contact-txt {
-            color: $mask-color-txt;
-            font-size: 3.5rem;
-            line-height: 3rem;
-            font-weight: bold;
+            height: auto;
+            margin: auto;
+
+            @media (max-width: 550px) {
+
+                width: 90vw;
+            }
+
+            // @media (max-width: $mobile-breakpoint) {
+            //     width: 90vw;
+            //     height: auto;
+            //     grid-column: 1;
+            //     display: flex;
+            //     justify-content: center;
+            // }
+
+            .contact-form {
+                background-color: #0f0f0f;
+                padding: 4rem;
+                // height: 500px;
+
+                @media (max-width: 550px) {
+                    padding: 2rem;
+
+                }
+
+                // @media (max-width: $card-breakpoint) {
+                //     padding: 2rem;
+                // }
+            }
+        }
+
+        .contact-txt-container {
+            grid-row: 2;
+            // text-align: center;
+            margin-top: -.4rem;
+
+            @media (max-width: $card-breakpoint) {
+                grid-row: 1;
+                text-align: center;
+            }
+
+            .contact-txt {
+                color: $mask-color-txt;
+                font-size: 3rem;
+                line-height: 3.5rem;
+                font-weight: bold;
+
+                text-shadow: 0px 0px 10px rgba(143, 161, 175, 0.1);
+
+            }
 
 
+            .contact-subtext {
+                font-size: 1.2rem;
+                color: rgba(143, 161, 175, 0.795);
+            }
         }
     }
 }
+
 
 // .contact-container {
 //     display: grid;

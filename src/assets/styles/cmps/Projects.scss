@@ -146,13 +146,6 @@
 }
 
 .my-proj-txt {
-    // color: $mask-color-txt;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-
-    // color: #fff7ee;
-    background: linear-gradient(45deg, #ff4e36, #ff8400);
-    // color: rgb(246, 249, 250);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgb(244, 252, 255);
     font-size: clamp(2.5rem, 12.5vw, 8.5rem);
 }
