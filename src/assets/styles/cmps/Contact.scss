@@ -52,9 +52,10 @@
                 // height: 500px;
 
                 @media (max-width: 550px) {
-                    padding: 2rem;
+                    padding: 3rem;
 
                 }
+
 
                 // @media (max-width: $card-breakpoint) {
                 //     padding: 2rem;
@@ -74,7 +75,7 @@
 
             .contact-txt {
                 color: $mask-color-txt;
-                font-size: 3rem;
+                font-size: clamp(2rem, 9vw, 3rem); // font-size: 3rem;
                 line-height: 3.5rem;
                 font-weight: bold;
 

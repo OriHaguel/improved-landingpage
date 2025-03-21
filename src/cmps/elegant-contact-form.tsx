@@ -43,7 +43,7 @@ const ContactForm = () => {
       <div className='contact-container'>
         <div className='contact-txt-container'>
           <h2 className='contact-txt'>Have any questions? contact me here!</h2>
-          <p className="contact-subtext">I'm always happy to help. Drop a message below!</p>
+          {/* <p className="contact-subtext">I'm always happy to help. Drop a message below!</p> */}
 
         </div>
         <div className="form-container">
@@ -52,11 +52,11 @@ const ContactForm = () => {
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500 opacity-20 rounded-full blur-xl  " ></div>
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-blue-500 opacity-20 rounded-full blur-xl"></div>
 
-            <h2 className="text-3xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+            <h2 className="mb-4 text-3xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
               Get in Touch
             </h2>
 
-            <p className="text-gray-400 mb-6">We'd love to hear from you. Send us a message.</p>
+            {/* <p className="text-gray-400 mb-6">We'd love to hear from you. Send us a message.</p> */}
 
             {isSubmitted ? (
               <motion.div
