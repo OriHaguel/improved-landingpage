@@ -38,29 +38,18 @@
                 width: 90vw;
             }
 
-            // @media (max-width: $mobile-breakpoint) {
-            //     width: 90vw;
-            //     height: auto;
-            //     grid-column: 1;
-            //     display: flex;
-            //     justify-content: center;
-            // }
-
             .contact-form {
                 background-color: #0f0f0f;
                 padding: 4rem;
-                // height: 500px;
 
                 @media (max-width: 550px) {
-                    padding: 3rem;
+                    padding: 2.5rem;
+                    margin-bottom: 2rem;
 
                 }
-
-
-                // @media (max-width: $card-breakpoint) {
-                //     padding: 2rem;
-                // }
             }
+
+
         }
 
         .contact-txt-container {

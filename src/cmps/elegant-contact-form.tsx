@@ -1,41 +1,42 @@
-import { useState } from 'react';
+import { useState, FormEvent, ChangeEvent } from 'react';
 import { motion } from "framer-motion";
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { CheckCircle2 } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
-const ContactForm = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState('');
+const ContactForm = (): JSX.Element => {
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
 
-  const handleSubmit = (e: any) => {
+  const formspreeId = import.meta.env.VITE_FORMSPREE ?? "";
+  const [state, handleSubmit] = useForm(formspreeId);
+
+  const isSubmitting = state.submitting;
+  const isSubmitted = state.succeeded;
+
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setEmail(e.target.value);
+  };
+
+  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
+    setMessage(e.target.value);
+  };
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-    setError('');
 
-    if (!email || !message) {
-      setError('Please fill in all fields');
-      return;
-    }
+    await handleSubmit({
+      email,
+      message
+    });
 
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
+    if (state.succeeded) {
       setEmail('');
       setMessage('');
-
-      // Reset success state after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-    }, 1500);
+    }
   };
 
   return (
@@ -43,20 +44,16 @@ const ContactForm = () => {
       <div className='contact-container'>
         <div className='contact-txt-container'>
           <h2 className='contact-txt'>Have any questions? contact me here!</h2>
-          {/* <p className="contact-subtext">I'm always happy to help. Drop a message below!</p> */}
-
         </div>
         <div className="form-container">
           <div className="contact-form text-white rounded-xl shadow-2xl relative overflow-hidden ">
             {/* Decorative elements */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500 opacity-20 rounded-full blur-xl  " ></div>
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500 opacity-20 rounded-full blur-xl"></div>
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-blue-500 opacity-20 rounded-full blur-xl"></div>
 
-            <h2 className="mb-4 text-3xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+            {!isSubmitted && <h2 className="mb-4 text-3xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
               Get in Touch
-            </h2>
-
-            {/* <p className="text-gray-400 mb-6">We'd love to hear from you. Send us a message.</p> */}
+            </h2>}
 
             {isSubmitted ? (
               <motion.div
@@ -66,10 +63,10 @@ const ContactForm = () => {
               >
                 <CheckCircle2 className="text-green-500 w-16 h-16 mb-4" />
                 <h3 className="text-xl font-medium mb-2">Message Sent!</h3>
-                <p className="text-gray-400">We'll get back to you soon.</p>
+                <p className="text-gray-400">I'll get back to you soon.</p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+              <form onSubmit={onSubmit} className="space-y-6 relative z-10">
                 <div className="space-y-2">
                   <Label
                     htmlFor="email"
@@ -80,14 +77,23 @@ const ContactForm = () => {
                   <div className="relative">
                     <Input
                       id="email"
+                      name="email"
                       type="email"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      autoComplete='email'
+                      onChange={handleEmailChange}
                       className="w-full bg-gray-900 border-gray-800 focus:border-purple-500 focus:ring-purple-500 text-gray-100 rounded-lg"
                       placeholder="your@email.com"
+                      required
                     />
                     <div className="absolute inset-0 rounded-lg pointer-events-none border border-gray-700 border-opacity-50"></div>
                   </div>
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                    className="text-red-500 mt-2"
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -99,26 +105,17 @@ const ContactForm = () => {
                   </Label>
                   <div className="relative">
                     <Textarea
-
                       id="message"
+                      name="message"
                       value={message}
-                      onChange={(e) => setMessage(e.target.value)}
+                      onChange={handleMessageChange}
                       className="resize-none w-full bg-gray-900 border-gray-800 focus:border-purple-500 focus:ring-purple-500 text-gray-100 rounded-lg min-h-32"
                       placeholder="How can we help you?"
+                      required
                     />
                     <div className="absolute inset-0 rounded-lg pointer-events-none border border-gray-700 border-opacity-50"></div>
                   </div>
                 </div>
-
-                {error && (
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="text-red-400 text-sm"
-                  >
-                    {error}
-                  </motion.p>
-                )}
 
                 <Button
                   type="submit"
@@ -140,8 +137,6 @@ const ContactForm = () => {
         </div>
       </div>
     </div>
-
-
   );
 };
 
