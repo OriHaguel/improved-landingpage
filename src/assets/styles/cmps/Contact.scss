@@ -7,7 +7,7 @@
     // overflow: hidden;
 
     .contact-container {
-        width: 1000px;
+        width: 1200px;
         margin: auto;
         grid-column-gap: 2.5rem;
         grid-row-gap: 2rem;
@@ -29,7 +29,6 @@
         .form-container {
             grid-row: 2;
             width: 500px;
-
             height: auto;
             margin: auto;
 
@@ -44,7 +43,7 @@
 
                 @media (max-width: 550px) {
                     padding: 2.5rem;
-                    margin-bottom: 2rem;
+                    margin-bottom: 3.5rem;
 
                 }
             }
@@ -64,7 +63,7 @@
 
             .contact-txt {
                 color: $mask-color-txt;
-                font-size: clamp(2rem, 9vw, 3rem); // font-size: 3rem;
+                font-size: clamp(2rem, 9vw, 3.5rem); // font-size: 3rem;
                 line-height: 3.5rem;
                 font-weight: bold;
 

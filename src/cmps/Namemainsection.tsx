@@ -2,7 +2,7 @@ import { HyperText } from "@/components/magicui/hyper-text";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useMemo } from "react";
 import { MaskText } from "./MaskTextAnimation";
-
+import cv from '../assets/cv/cv.pdf'
 export function MainSection() {
     const { scrollY } = useScroll();
 
@@ -59,7 +59,8 @@ export function MainSection() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                 >
-                    <a href="#projects" className="custom-button default">View Portfolio</a>
+                    <a href={cv} download="Ori_Haguel_CV.pdf" className="custom-button default" aria-label="Download Ori Haguel's CV">Download cv</a>
+                    {/* <a href="#projects" className="custom-button default">View Portfolio</a> */}
                     <a href="#contacts" className="custom-button outline">Contact Me</a>
                 </motion.div>
             </div>

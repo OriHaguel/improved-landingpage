@@ -40,7 +40,7 @@ const ContactForm = (): JSX.Element => {
   };
 
   return (
-    <div className='contact-page'>
+    <div className='contact-page' id='contacts'>
       <div className='contact-container'>
         <div className='contact-txt-container'>
           <h2 className='contact-txt'>Have any questions? contact me here!</h2>
@@ -82,7 +82,7 @@ const ContactForm = (): JSX.Element => {
                       value={email}
                       autoComplete='email'
                       onChange={handleEmailChange}
-                      className="w-full bg-gray-900 border-gray-800 focus:border-purple-500 focus:ring-purple-500 text-gray-100 rounded-lg"
+                      className=" w-full bg-gray-900 border-gray-800 focus:border-purple-500 focus:ring-purple-500 text-gray-100 rounded-lg"
                       placeholder="your@email.com"
                       required
                     />

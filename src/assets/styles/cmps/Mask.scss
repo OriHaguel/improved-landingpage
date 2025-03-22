@@ -68,7 +68,7 @@
             color: $mask-color-txt;
             padding: 0;
             padding-top: 5rem;
-            font-size: 5rem;
+            font-size: 4.9rem;
 
             @media (max-width: $mobile-breakpoint) {
                 font-size: clamp(2.4rem, 10vw, 3.3rem);
