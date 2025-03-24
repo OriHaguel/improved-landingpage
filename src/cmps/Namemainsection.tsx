@@ -7,7 +7,7 @@ export function MainSection() {
     const { scrollY } = useScroll();
 
     // Use throttling or debouncing for scroll-based animation
-    const scale = useTransform(scrollY, [0, 300], [1, 1.3]);
+    const scale = useTransform(scrollY, [0, 300], [1, 1.15]);
 
     // Use memoization for static content like social icons
     const socialIcons = useMemo(() => (

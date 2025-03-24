@@ -44,15 +44,16 @@ const ContactForm = (): JSX.Element => {
       <div className='contact-container'>
         <div className='contact-txt-container'>
           <h2 className='contact-txt'>Have any questions? contact me here!</h2>
+          <p className='contact-subtext'>Or send an email <a href="mailto:orihaguel.com"><span>here!</span></a></p>
         </div>
         <div className="form-container">
           <div className="contact-form text-white rounded-xl shadow-2xl relative overflow-hidden ">
             {/* Decorative elements */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500 opacity-20 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-blue-500 opacity-20 rounded-full blur-xl"></div>
+            <div className="bg-circle-color-1 absolute -top-10 -right-10 w-40 h-40 bg-purple-500 opacity-20 rounded-full blur-xl"></div>
+            <div className="bg-circle-color-2 absolute -bottom-8 -left-8 w-32 h-32 bg-blue-500 opacity-20 rounded-full blur-xl"></div>
 
-            {!isSubmitted && <h2 className="mb-4 text-3xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-              Get in Touch
+            {!isSubmitted && <h2 className="get-in-touch-txt mb-4 text-3xl font-bold mb-1 w-fit">
+              Get in Touch!
             </h2>}
 
             {isSubmitted ? (
@@ -82,7 +83,7 @@ const ContactForm = (): JSX.Element => {
                       value={email}
                       autoComplete='email'
                       onChange={handleEmailChange}
-                      className=" w-full bg-gray-900 border-gray-800 focus:border-purple-500 focus:ring-purple-500 text-gray-100 rounded-lg"
+                      className="contact-input-bg w-full border-gray-800 focus:border-purple-500 focus:ring-purple-500 text-gray-100 rounded-lg"
                       placeholder="your@email.com"
                       required
                     />
@@ -109,7 +110,7 @@ const ContactForm = (): JSX.Element => {
                       name="message"
                       value={message}
                       onChange={handleMessageChange}
-                      className="resize-none w-full bg-gray-900 border-gray-800 focus:border-purple-500 focus:ring-purple-500 text-gray-100 rounded-lg min-h-32"
+                      className="contact-input-bg  resize-none w-full bg-gray-900 border-gray-800 focus:border-purple-500 focus:ring-purple-500 text-gray-100 rounded-lg min-h-32"
                       placeholder="How can we help you?"
                       required
                     />
@@ -120,7 +121,7 @@ const ContactForm = (): JSX.Element => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white rounded-lg py-3 font-medium transition-all duration-200 ease-in-out transform hover:scale-[1.02] active:scale-[0.98]"
+                  className="w-full send-mgg-btn text-white rounded-lg py-3 font-medium transition-all duration-200 ease-in-out transform hover:scale-[1.03] active:scale-[0.98]"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center">
