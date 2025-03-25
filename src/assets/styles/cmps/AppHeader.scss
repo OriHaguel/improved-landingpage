@@ -10,6 +10,7 @@
     transition: background-color 0.3s ease;
     font-family: 'Poppins', sans-serif;
 
+
     &__content {
         display: flex;
         justify-content: space-between;
@@ -17,6 +18,7 @@
         padding: 1.2rem 0;
         max-width: 1200px;
         margin: 0 auto;
+        width: 90%;
     }
 
     &__logo {
@@ -67,7 +69,6 @@
 
         font-weight: 600;
         padding: 0.5rem 1rem;
-        // font-size: 5rem;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
@@ -133,7 +134,7 @@
     .app-header {
         &__content {
             flex-wrap: wrap;
-            width: 90%;
+
 
         }
 

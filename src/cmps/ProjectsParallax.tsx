@@ -7,7 +7,6 @@ import fitrackbg from '../../src/assets/img/fitrack.webp'
 export function ProjectsParallax() {
 
     const projects = [
-
         {
             name: 'FiTrack',
             subText: 'Fitness tracker - track your progress',
@@ -40,29 +39,22 @@ export function ProjectsParallax() {
                                 <div className="lg:w-auto w-[min(85vw,500px)] mx-auto lg:mt-0 mt-[-4rem] lg:mr-12 lg:pl-8">
                                     <p style={{ '--gradient': `linear-gradient(90deg,${project.colors})` } as React.CSSProperties} className="dynamic-text text-3xl">{project.name}</p>
                                     <small className="text-white font-[600]">{project.subText}</small>
-
-
-
                                     <a className="view-more-container block mt-4" href={project.link} target="_blank">
                                         <span className="view-more font-[600] text-white text2xl">View More</span>
                                     </a>
-
-
                                 </div>
                                 <a href={project.link} target="_blank">
                                     <Tilt imageUrl={project.image} projecyName={project.name} textColors={project.colors} />
                                 </a>
-                                <div className="w-[min(85vw,500px)] mx-auto mt-[1.5rem] pb-[3rem] lg:pb-0 lg:mt-0 lg:w-full lg:grid lg:place-items-center">
+                                <div className="w-[min(85vw,500px)] mx-auto mt-[1.5rem] lg:pb-0 lg:mt-0 lg:w-full lg:grid lg:place-items-center">
 
                                     <p className="lg:ml-12 text-white text-1xl lg:mr-12"><span className="text-2xl"></span>{project.technolegies}</p>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             ))}
-
         </section>
     )
 }
