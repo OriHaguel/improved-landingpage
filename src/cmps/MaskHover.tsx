@@ -28,14 +28,16 @@ export default function MaskHover() {
                 // }}
                 animate={{
                     WebkitMaskPosition: `${coords.x ? coords.x - size / 2 + (isHovered ? numberToHover() : 0) : 0}px 
-                                          ${coords.y ? coords.y - size / 2 + (isHovered ? 270 : 0) : 0}px`,
+                                          ${coords.y ? coords.y - size / 2 + (isHovered ? 240 : 0) : 0}px`,
                     WebkitMaskSize: `${size}px`,
                 }}
                 transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
             >
                 <p onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                    A Junior developer - with skills that haven't been replaced by A.I (yet) - will make good shit for peanuts because i don't have experience.
-                    {/* A visual designer - with skills that haven't been replaced by A.I (yet) - making good shit only if the paycheck is equally good. */}
+                    A Junior Developer: Certified Google-Fu Master and Prompt Whisperer. Willing to trade lines of code for slightly above ramen-noodle wages. Anyway... hire me!
+                    {/* A Junior Developer: Certified Google-Fu Master and Prompt Whisperer. Willing to trade lines of code for slightly above ramen-noodle wages. anyway... hire me! */}
+                    {/* Junior developer: Certified Google-Fu Master and Prompt Whisperer. Willing to trade lines of code for slightly above ramen-noodle wages. (Available until ai take my job) */}
+                    {/* A Junior developer with decent creativity and an expert at googling and prompting code. Willing to work for peanuts before ai will take my job. */}
                 </p>
             </motion.div>}
 
