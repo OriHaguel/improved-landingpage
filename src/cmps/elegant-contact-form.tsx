@@ -43,7 +43,7 @@ const ContactForm = (): JSX.Element => {
     <div className='contact-page' id='contacts'>
       <div className='contact-container'>
         <div className='contact-txt-container'>
-          <h2 className='contact-txt'>Have any questions? contact me here!</h2>
+          <h2 className='contact-txt'>Contact Me - I'd Love to Hear From You!</h2>
           <p className='contact-subtext'>Or send an email <a href="mailto:orihaguel.com"><span>here!</span></a></p>
         </div>
         <div className="form-container">

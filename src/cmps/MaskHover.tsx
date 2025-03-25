@@ -53,8 +53,9 @@ export default function MaskHover() {
 
                 <p>
                     {/* I'm a <span>selectively skilled</span> product designer with a strong focus on producing high-quality & impactful digital experiences. */}
-                    I'm a <span>dedicated</span> full-stack developer focused on building reliable, scalable applications with clean code and smooth user experiences.
-
+                    {/* I'm a <span>dedicated</span> full-stack developer focused on building reliable, scalable applications with clean code and smooth user experiences. */}
+                    {/* I'm a <span>Full-Stack</span> developer and Coding Academy graduate,building scalable and reliable applications with the latest technologies. */}
+                    I'm a <span>Full-Stack</span> Developer and Coding Academy graduate, passionate about building scalable and reliable applications using the latest technologies.
                 </p>
             </div>
         </main>

@@ -3,7 +3,7 @@ import { Parallax } from 'react-parallax';
 import sky from '../assets/img/freepik__dd-more-rocks__84491 (1).webp';
 import { RockGrid } from './Rocksgrid';
 import { MainSection } from './Namemainsection';
-
+import { isMobile } from '@/services/utility';
 
 const Mainpage = () => {
     const parallaxRef = useRef<HTMLDivElement>(null);
@@ -34,7 +34,8 @@ const Mainpage = () => {
                         }}
                     />
                     <MainSection />
-                    <RockGrid />
+                    {!isMobile() && <RockGrid />}
+
                 </div>
             </Parallax>
         </div>
