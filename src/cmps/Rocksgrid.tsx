@@ -1,9 +1,5 @@
 import { useState, useCallback } from 'react';
-
-// import flyingrock from '../assets/img/idknomore.png';
 import flyingrock from '../assets/img/flygridrock.webp';
-// import flyingrock from '../assets/img/af89cd10-9c13-49e3-9d17-308339b80b26.png';
-// import flyingrock from '../assets/img/flyrock.webp';
 import { throttle } from 'lodash';
 
 export function RockGrid() {
@@ -15,7 +11,6 @@ export function RockGrid() {
             const centerX = window.innerWidth / 2;
             const centerY = window.innerHeight / 2;
 
-            // Adjust sensitivity
             const moveX = (clientX - centerX) * 0.015;
             const moveY = (clientY - centerY) * 0.015;
 
