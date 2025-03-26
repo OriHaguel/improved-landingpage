@@ -23,6 +23,7 @@ export function ProjectsBg() {
             <img
                 loading="lazy"
                 className="full-img"
+                alt="Rocky mountain landscape with a bright sky and clouds"
                 src={projBg}
                 style={{
                     transform: isMobile()
