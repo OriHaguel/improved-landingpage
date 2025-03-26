@@ -1,18 +1,13 @@
 
-// import styles from "./page.module.scss";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { isMobile, numberToHover } from "@/services/utility";
 import { MaskText } from "./MaskTextAnimation";
 
-
 export default function MaskHover() {
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const size: number = isHovered ? 400 : 40;
     const [coords, setCoords] = useState({ x: 0, y: 0 });
-
-
-
 
     return (
 
@@ -41,20 +36,13 @@ export default function MaskHover() {
                 </p>
             </motion.div>}
 
-
-
-
-
-
             <div className="about-me-con">
-                {/* <p className="about-me text-white">About me</p> */}
                 <MaskText phrase="About Me" cn="about-me" />
             </div>
 
             <div className='body'>
 
                 <p>
-                    {/* I'm a <span>selectively skilled</span> product designer with a strong focus on producing high-quality & impactful digital experiences. */}
                     {/* I'm a <span>dedicated</span> full-stack developer focused on building reliable, scalable applications with clean code and smooth user experiences. */}
                     {/* I'm a <span>Full-Stack</span> developer and Coding Academy graduate,building scalable and reliable applications with the latest technologies. */}
                     I'm a <span>Full-Stack</span> Developer and Coding Academy graduate, passionate about building scalable and reliable applications using the latest technologies.
