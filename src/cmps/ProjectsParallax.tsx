@@ -43,7 +43,7 @@ export function ProjectsParallax() {
                                         <span className="view-more font-[600] text-white text2xl">View More</span>
                                     </a>
                                 </div>
-                                <a href={project.link} target="_blank">
+                                <a href={project.link} target="_blank" aria-label={`View project: ${project.name}`} rel="noopener noreferrer">
                                     <Tilt imageUrl={project.image} projecyName={project.name} textColors={project.colors} />
                                 </a>
                                 <div className="w-[min(85vw,500px)] mx-auto mt-[1.5rem] lg:pb-0 lg:mt-0 lg:w-full lg:grid lg:place-items-center">
