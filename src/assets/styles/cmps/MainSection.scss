@@ -1,5 +1,4 @@
 @use "../setup/variables" as *;
-// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
 @font-face {
     font-family: 'Avant Garde Book BT';
@@ -195,7 +194,7 @@ body {
     .custom-button {
         width: 40vw;
         max-width: 13rem;
-        padding: 0.875rem 1.25rem;
+        padding: 0.875rem 1rem;
 
     }
 

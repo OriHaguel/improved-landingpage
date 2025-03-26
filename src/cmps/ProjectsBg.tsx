@@ -2,7 +2,6 @@ import { isMobile } from "@/services/utility";
 import { scroll } from "motion";
 import { useState, useEffect } from "react";
 import projBg from '../assets/img/secondtest.webp'
-// import projBg from '../assets/img/test.webp'
 import { MaskText } from "./MaskTextAnimation";
 export function ProjectsBg() {
     const [scrolly, setScrolly] = useState(0);
@@ -10,15 +9,14 @@ export function ProjectsBg() {
 
     useEffect(() => {
         const unsubscribe = scroll((progress: number) => {
-            setScrolly(progress * 100); // Convert to percentage
+            setScrolly(progress * 100)
         });
 
-        return () => unsubscribe(); // Cleanup on unmount
+        return () => unsubscribe()
     }, []);
 
     return (
         <section className="sticky top-0 project-bg-container" >
-            {/* <h1 className="sticky top-[15px] text-large-size font-bold text-center uppercase text-white scramble-text title-wrap"> My Projects</h1> */}
             <h1 className="sticky top-[15px]  text-center uppercase text-white scramble-text title-wrap"><MaskText phrase="My Projects" cn="my-proj-txt" /></h1>
             <img
                 loading="lazy"
