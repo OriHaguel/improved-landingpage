@@ -14,13 +14,6 @@ export default function MaskHover() {
         <main className='main' onMouseMove={(e) => setCoords({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY })} id="about">
             {!isMobile() && <motion.div
                 className='mask'
-                // animate={{
-                //     // WebkitMaskPosition: `${x ? x - size / 2 : 0}px ${y ? y - size / 2 : 0}px`,
-                //     // WebkitMaskPosition: `${coords.x ? coords.x - size / 2 : 0}px ${coords.y ? coords.y - size / 2 : 0}px`,
-                //     // WebkitMaskPosition: `${coords.x ? coords.x + size / 1.6 : 0}px ${coords.y ? coords.y + size / 6 : 0}px`,
-                //     // WebkitMaskPosition: `${coords.x ? coords.x + size / 1.6 : 0}px ${coords.y ? coords.y + size / 6 : 0}px`,
-                //     WebkitMaskSize: `${size}px`,
-                // }}
                 animate={{
                     WebkitMaskPosition: `${coords.x ? coords.x - size / 2 + (isHovered ? numberToHover() : 0) : 0}px 
                                           ${coords.y ? coords.y - size / 2 + (isHovered ? 240 : 0) : 0}px`,
@@ -30,9 +23,6 @@ export default function MaskHover() {
             >
                 <p onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                     A Junior Developer: Certified Google-Fu Master and Prompt Whisperer. Willing to trade lines of code for slightly above ramen-noodle wages. Anyway... hire me!
-                    {/* A Junior Developer: Certified Google-Fu Master and Prompt Whisperer. Willing to trade lines of code for slightly above ramen-noodle wages. anyway... hire me! */}
-                    {/* Junior developer: Certified Google-Fu Master and Prompt Whisperer. Willing to trade lines of code for slightly above ramen-noodle wages. (Available until ai take my job) */}
-                    {/* A Junior developer with decent creativity and an expert at googling and prompting code. Willing to work for peanuts before ai will take my job. */}
                 </p>
             </motion.div>}
 
@@ -41,10 +31,7 @@ export default function MaskHover() {
             </div>
 
             <div className='body'>
-
                 <p>
-                    {/* I'm a <span>dedicated</span> full-stack developer focused on building reliable, scalable applications with clean code and smooth user experiences. */}
-                    {/* I'm a <span>Full-Stack</span> developer and Coding Academy graduate,building scalable and reliable applications with the latest technologies. */}
                     I'm a <span>Full-Stack</span> Developer and Coding Academy graduate, passionate about building scalable and reliable applications using the latest technologies.
                 </p>
             </div>

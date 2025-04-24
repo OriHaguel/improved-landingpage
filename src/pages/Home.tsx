@@ -31,10 +31,7 @@ const HomePage = () => {
             <Mainpage />
             <MaskHover />
             <Projects />
-            {/* <div className="h-[70vh] bg-black flex items-center justify-center"> */}
             <ContactForm />
-            {/* </div> */}
-            {/* <FormMsg /> */}
         </div>
     )
 };

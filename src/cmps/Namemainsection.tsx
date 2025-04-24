@@ -1,7 +1,7 @@
-import { HyperText } from "@/components/magicui/hyper-text";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useMemo } from "react";
-import { MaskText } from "./MaskTextAnimation";
+
 import cv from '../assets/cv/cv.pdf'
 export function MainSection() {
     const { scrollY } = useScroll();
@@ -40,14 +40,9 @@ export function MainSection() {
                     transition={{ delay: 0.2, duration: 0.6 }}
                 >
                     <motion.div className="name" style={{ scale }}>
-                        {/* <MaskText phrase="Ori Haguel" /> */}
                         Ori Haguel
-
-                        {/* <h1 className="name">Ori Haguel</h1> */}
                     </motion.div>
-                    {/* <HyperText className="title">
-                        Full Stack Developer
-                    </HyperText> */}
+
                     <h1 className="title"> Full Stack Developer</h1>
                 </motion.div>
                 <div className="social-icons">
@@ -60,7 +55,6 @@ export function MainSection() {
                     transition={{ delay: 0.4, duration: 0.6 }}
                 >
                     <a href={cv} download="Ori_Haguel_CV.pdf" className="custom-button default" aria-label="Download Ori Haguel's CV">Download cv</a>
-                    {/* <a href="#projects" className="custom-button default">View Portfolio</a> */}
                     <a href="#contacts" className="custom-button outline">Contact Me</a>
                 </motion.div>
             </div>

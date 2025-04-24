@@ -31,8 +31,6 @@ export function Tilt({ imageUrl }: { imageUrl: string, projecyName: string, text
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}>
-
-            {/* <h1 style={{ '--gradient': `linear-gradient(90deg,${textColors})` } as React.CSSProperties} className="dynamic-text">{projecyName}</h1> */}
         </div>
     );
 }

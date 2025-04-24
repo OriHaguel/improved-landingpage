@@ -5,7 +5,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Mail, MessageSquare, ArrowRight } from 'lucide-react';
-// import { DropAnimation } from './DropAnimation';
 
 export function FormMsg() {
     const formspreeId = import.meta.env.VITE_FORMSPREE ?? "";
@@ -30,8 +29,6 @@ export function FormMsg() {
     }
 
     return (
-        // <DropAnimation>
-
         <div className='h-[100vh] bg-black flex items-center justify-center'>
 
             <div className="w-[90%] max-w-lg mx-auto">
@@ -107,8 +104,6 @@ export function FormMsg() {
                 </div>
             </div>
         </div>
-
-        // </DropAnimation>
     );
 }
 
