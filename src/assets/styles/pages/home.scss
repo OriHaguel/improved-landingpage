@@ -140,3 +140,31 @@
         transform: translateY(0px);
     }
 }
+
+footer {
+    background-color: #121212;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+.privacy-policy {
+    background-color: #121212;
+    color: white;
+    height: 100vh;
+
+    div {
+        width: 1000px;
+        margin: auto;
+        padding-top: 7rem;
+
+        p {
+            line-height: 2.4rem;
+        }
+
+    }
+
+}

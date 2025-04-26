@@ -40,11 +40,11 @@ const ContactForm = (): JSX.Element => {
   };
 
   return (
-    <div className='contact-page' id='contacts'>
+    <div className='contact-page relative' id='contacts'>
       <div className='contact-container'>
         <div className='contact-txt-container'>
           <h2 className='contact-txt'>Contact Me - I'd Love to Hear From You!</h2>
-          <p className='contact-subtext'>Or send an email <a href="mailto:orihaguel.com"><span>here!</span></a></p>
+          <p className='contact-subtext'>Or send an email <a href="mailto:orihaguel@gmail.com"><span>here!</span></a></p>
         </div>
         <div className="form-container">
           <div className="contact-form text-white rounded-xl shadow-2xl relative overflow-hidden ">
@@ -137,6 +137,11 @@ const ContactForm = (): JSX.Element => {
           </div>
         </div>
       </div>
+      <footer>
+        <p>© 2025 orihaguel.com. All rights reserved. | <a href="/privacy-policy" target="_blank">Privacy Policy</a></p>
+      </footer>
+
+
     </div>
   );
 };

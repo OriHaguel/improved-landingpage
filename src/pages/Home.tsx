@@ -1,3 +1,4 @@
+import { AppHeader } from "@/cmps/AppHeader";
 import ContactForm from "@/cmps/elegant-contact-form";
 import FormMsg from "@/cmps/FormMsg";
 import Mainpage from "@/cmps/Mainpage";
@@ -28,10 +29,14 @@ const HomePage = () => {
 
     return (
         <div>
+            <AppHeader />
             <Mainpage />
             <MaskHover />
             <Projects />
             <ContactForm />
+            {/* <footer>
+                <p>© 2025 orihaguel.com. All rights reserved. | <a href="/privacy-policy" target="_blank">Privacy Policy</a></p>
+            </footer> */}
         </div>
     )
 };

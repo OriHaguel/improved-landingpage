@@ -30,7 +30,7 @@ export function MaskText({ phrase, cn }: Mask) {
         <div ref={ref} className='text-animation-con'>
 
             <div className='lineMask'>
-                <motion.p className={cn} variants={animation} initial="initial" animate={inView ? "enter" : ""}>{phrase}</motion.p>
+                <motion.h2 className={cn} variants={animation} initial="initial" animate={inView ? "enter" : ""}>{phrase}</motion.h2>
             </div>
 
         </div>
